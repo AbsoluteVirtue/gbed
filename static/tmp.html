@@ -96,7 +96,7 @@
       returns a tag at a given index from a list of a given actor's tags<br><br>
 
       parameters: Actor - instance of actor class<br>
-                  Index - index inside list of tags (numeric value starting with 1)<br>
+                  Index - index inside list of tags (integer value starting with 1)<br>
       return value: string
     </p>
     <p class="examples">
@@ -244,8 +244,8 @@
       sets the identification number of the given actor's team<br><br>
 
       parameters: Actor - instance of actor class<br>
-                  TeamId - identifier to be set for given actor (numeric value)<br>
-      return value: integer
+                  TeamId - identifier to be set for given actor (integer value)<br>
+      return value: nil
     </p>
     <p class="examples">
 
@@ -254,28 +254,80 @@
     <h2 id="a-ai">AI</h2><a href="#a-categories-list">top</a>
 
     <h3>CleanUp</h3>
-    <p>
-      ---
+    <p class="declaration">
+      ai::CleanUp(AIControllerTag)
+    </p>
+    <p class="description">
+      removes all AI-controlled characters of a given type<br><br>
+
+      parameters: AIControllerTag - name of controller<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>Create</h3>
-    <p>
-      ---
+    <p class="declaration">
+      ai::Create(SpawnPoint, AIControllerTag, FreezeTime)
+    </p>
+    <p class="description">
+      create an AI-controlled character at a given spawn point<br><br>
+
+      parameters: SpawnPoint - instance of spawner-actor class<br>
+                  AIControllerTag - name of controller<br>
+                  FreezeTime - delay in seconds before activating requested character (floating-point value)<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>CreateOverDuration</h3>
-    <p>
-      ---
+    <p class="declaration">
+      ai::CreateOverDuration(Duration, Count, OrderedSpawnPoints, AIControllerTag)
+    </p>
+    <p class="description">
+      create an AI-controlled character at a given spawn point<br><br>
+
+      parameters: Duration - delay in seconds spawning characters (floating-point value)<br>
+                  Count - number of characters to spawn (integer value)<br>
+                  OrderedSpawnPoints - list of instances of spawner-actor class<br>
+                  AIControllerTag - name of controller<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetControllers</h3>
-    <p>
-      ---
+    <p class="declaration">
+      ai::GetControllers(Class, Tag, TeamId, SquadId)
+    </p>
+    <p class="description">
+      create an AI-controlled character at a given spawn point<br><br>
+
+      parameters: Class - name of class<br>
+                  Tag - name of previousy added tag<br>
+                  TeamId - identifier representing character's team (integer value)<br>
+                  SquadId - identifier representing character's squad (integer value)<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetMaxCount</h3>
-    <p>
-      ---
+    <p class="declaration">
+      ai::GetMaxCount()
+    </p>
+    <p class="description">
+      ---<br><br>
+
+      return value: integer
+    </p>
+    <p class="examples">
+
     </p>
 
     <h2 id="a-gamemode">Game Mode</h2><a href="#a-categories-list">top</a>
