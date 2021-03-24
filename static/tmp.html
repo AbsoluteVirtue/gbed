@@ -31,79 +31,225 @@
     <h2 id="a-actor">Actor</h2><a href="#a-categories-list">top</a>
 
     <h3>__tostring</h3>
-    <p>
-      converts an actor class instance to a string
+    <p class="declaration">
+      actor::__tostring(Actor)
+    </p>
+    <p class="description">
+      converts an actor class instance to a string<br><br>
+
+      parameters: Actor - instance of actor class<br>
+      return value: string
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>AddTag</h3><button class="filter-tag">#tag</button>
-    <p>
-      adds a tag to an actor for future reference
+    <p class="declaration">
+      actor::AddTag(Actor, Tag)
+    </p>
+    <p class="description">
+      adds a tag to the list of a given actor's tags<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  Tag - string to be added<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetLocation</h3>
-    <p>
-      ---
+    <p class="declaration">
+      actor::GetLocation(Actor)
+    </p>
+    <p class="description">
+      ---<br><br>
+
+      parameters: Actor - instance of actor class<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetOverlaps</h3><button class="filter-trigger">#trigger</button>
-    <p>
-      ---
+    <p class="declaration">
+      actor::GetOverlaps(Actor, Class)
+    </p>
+    <p class="description">
+      ---<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  Class - name of actor class<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetTag</h3><button class="filter-tag">#tag</button>
-    <p>
-      ---
+    <p class="declaration">
+      actor::GetTag(Actor, Index)
+    </p>
+    <p class="description">
+      returns a tag at a given index from a list of a given actor's tags<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  Index - index inside list of tags (numeric value starting with 1)<br>
+      return value: string
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetTags</h3><button class="filter-tag">#tag</button>
-    <p>
-      ---
+    <p class="declaration">
+      actor::GetTags(Actor)
+    </p>
+    <p class="description">
+      returns a list of tags of a given actor<br><br>
+
+      parameters: Actor - instance of actor class<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetTeamId</h3>
-    <p>
-      ---
+    <p class="declaration">
+      actor::GetTeamId(Actor)
+    </p>
+    <p class="description">
+      returns the identification number representing the given actor's team<br>
+      team ID has to be set beforehand, either in the editor or programmatically<br><br>
+
+      parameters: Actor - instance of actor class<br>
+      return value: integer
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>HasTag</h3><button class="filter-tag">#tag</button>
-    <p>
-      ---
-    </p>    
+    <p class="declaration">
+      actor::HasTag(Actor, Tag)
+    </p>
+    <p class="description">
+      checks the list of a given actor's tags for a match with a specific string<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  Tag - string to be searched<br>
+      return value: boolean
+    </p>
+    <p class="examples">
+
+    </p>
     
     <h3>IsActive</h3>
-    <p>
-      ---
-    </p>    
+    <p class="declaration">
+      actor::IsActive(Actor)
+    </p>
+    <p class="description">
+      checks if the given actor has been activated<br><br>
+
+      parameters: Actor - instance of actor class<br>
+      return value: boolean
+    </p>
+    <p class="examples">
+
+    </p>  
         
     <h3>IsOverlapping</h3><button class="filter-trigger">#trigger</button>
-    <p>
-      ---
-    </p>    
+    <p class="declaration">
+      actor::IsOverlapping(Actor, OtherActor)
+    </p>
+    <p class="description">
+      checks if the two given actor are ovelapping<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  OtherActor - instance of actor class<br>
+      return value: boolean
+    </p>
+    <p class="examples">
+
+    </p>  
             
     <h3>RemoveTag</h3><button class="filter-tag">#tag</button>
-    <p>
-      removes a tag from an actor
-    </p>    
+    <p class="declaration">
+      actor::RemoveTag(Actor, Tag)
+    </p>
+    <p class="description">
+      removes a tag from the list of a given actor's tags<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  Tag - string to be added<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
+    </p>  
                 
     <h3>SetActive</h3>
-    <p>
-      ---
-    </p>    
+    <p class="declaration">
+      actor::SetActive(Actor, NewActive)
+    </p>
+    <p class="description">
+      toggle a given actor's active status<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  NewActive - boolean value to be applied (true or false)<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
+    </p>  
                     
     <h3>SetEnableCollision</h3><button class="filter-trigger">#trigger</button>
-    <p>
-      ---
-    </p>    
+    <p class="declaration">
+      actor::SetEnableCollision(Actor, Enabled)
+    </p>
+    <p class="description">
+      toggle a given actor's collision processing<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  Enabled - boolean value to be applied (true or false)<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
+    </p>  
                         
     <h3>SetHidden</h3>
-    <p>
-      ---
-    </p>    
+    <p class="declaration">
+      actor::SetHidden(Actor, Hidden)
+    </p>
+    <p class="description">
+      toggle a given actor's hidden setting<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  Hidden - boolean value to be applied (true or false)<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
+    </p>   
                             
     <h3>SetTeamId</h3>
-    <p>
-      ---
-    </p>    
+    <p class="declaration">
+      actor::SetTeamId(Actor, TeamId)
+    </p>
+    <p class="description">
+      sets the identification number of the given actor's team<br><br>
+
+      parameters: Actor - instance of actor class<br>
+                  TeamId - identifier to be set for given actor (numeric value)<br>
+      return value: integer
+    </p>
+    <p class="examples">
+
+    </p>
 
     <h2 id="a-ai">AI</h2><a href="#a-categories-list">top</a>
 
