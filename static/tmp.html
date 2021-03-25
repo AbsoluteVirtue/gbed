@@ -12,6 +12,13 @@
           color: white;
           background: #1c87c9;
         }
+        code { 
+            background: hsl(220, 80%, 90%); 
+        }
+        pre {
+            white-space: pre-wrap;
+            background: hsl(30, 80%, 90%);
+        }
         </style>
 </head>
 
@@ -37,11 +44,16 @@
     <p class="description">
       converts an actor class instance to a string<br><br>
 
-      parameters: Actor - instance of actor class<br>
+      parameters: Actor - instance of actor class (userdata value)<br>
       return value: string
     </p>
     <p class="examples">
-
+      <pre><code>
+        function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)
+          print(actor.__tostring(GameTrigger))
+          print(actor.__tostring(Character))
+        end
+      </code></pre>
     </p>
 
     <h3>AddTag</h3><button class="filter-tag">#tag</button>
@@ -51,12 +63,14 @@
     <p class="description">
       adds a tag to the list of a given actor's tags<br><br>
 
-      parameters: Actor - instance of actor class<br>
-                  Tag - string to be added<br>
+      parameters: Actor - instance of actor class (userdata value)<br>
+                  Tag - string to be added (string value)<br>
       return value: nil
     </p>
     <p class="examples">
+      <pre><code>
 
+      </code></pre>
     </p>
 
     <h3>GetLocation</h3>
@@ -70,7 +84,9 @@
       return value: table
     </p>
     <p class="examples">
+      <pre><code>
 
+      </code></pre>
     </p>
 
     <h3>GetOverlaps</h3><button class="filter-trigger">#trigger</button>
@@ -85,7 +101,7 @@
       return value: table
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h3>GetTag</h3><button class="filter-tag">#tag</button>
@@ -100,7 +116,7 @@
       return value: string
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h3>GetTags</h3><button class="filter-tag">#tag</button>
@@ -114,7 +130,7 @@
       return value: table
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h3>GetTeamId</h3>
@@ -129,7 +145,7 @@
       return value: number
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h3>HasTag</h3><button class="filter-tag">#tag</button>
@@ -139,12 +155,12 @@
     <p class="description">
       checks the list of a given actor's tags for a match with a specific string<br><br>
 
-      parameters: Actor - instance of actor class<br>
+      parameters: Actor - instance of actor class (userdata value)<br>
                   Tag - string to be searched<br>
       return value: boolean
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
     
     <h3>IsActive</h3>
@@ -158,7 +174,7 @@
       return value: boolean
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>  
         
     <h3>IsOverlapping</h3><button class="filter-trigger">#trigger</button>
@@ -173,7 +189,7 @@
       return value: boolean
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>  
             
     <h3>RemoveTag</h3><button class="filter-tag">#tag</button>
@@ -188,7 +204,7 @@
       return value: nil
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>  
                 
     <h3>SetActive</h3>
@@ -203,7 +219,7 @@
       return value: nil
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>  
                     
     <h3>SetEnableCollision</h3><button class="filter-trigger">#trigger</button>
@@ -218,7 +234,7 @@
       return value: nil
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>  
                         
     <h3>SetHidden</h3>
@@ -233,7 +249,7 @@
       return value: nil
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>   
                             
     <h3>SetTeamId</h3>
@@ -248,7 +264,7 @@
       return value: nil
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h2 id="a-ai">AI</h2><a href="#a-categories-list">top</a>
@@ -264,7 +280,7 @@
       return value: nil
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h3>Create</h3>
@@ -280,7 +296,7 @@
       return value: nil
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h3>CreateOverDuration</h3>
@@ -297,7 +313,7 @@
       return value: nil
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h3>GetControllers</h3>
@@ -314,7 +330,7 @@
       return value: table
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h3>GetMaxCount</h3>
@@ -327,7 +343,7 @@
       return value: number
     </p>
     <p class="examples">
-
+      <pre><code></code></pre>
     </p>
 
     <h2 id="a-gamemode">Game Mode</h2><a href="#a-categories-list">top</a>
@@ -504,7 +520,7 @@
       parameters: Class - name of class<br>
       return value: table
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -518,7 +534,7 @@
       parameters: Tag - name of tag<br>
       return value: table
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -532,7 +548,7 @@
       parameters: Tag - name of tag<br>
       return value: table
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -546,7 +562,7 @@
       parameters: Message - null-terminated string<br>
       return value: nil
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -562,7 +578,7 @@
       parameters: Max - upper bound to be used for generating (integer or float value)<br>
       return value: number
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -577,7 +593,7 @@
                   Max - upper bound (integer or float value)<br>
       return value: number
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -661,7 +677,7 @@
                   InKey - name of ... (string value)<br>
       return value: nil
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -674,7 +690,7 @@
 
       return value: nil
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -691,7 +707,7 @@
                   InLoop - toggle ... (boolean value)<br>
       return value: nil
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -708,7 +724,7 @@
                   B - vector to be added (table value)<br>
       return value: table
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -723,7 +739,7 @@
                   B - vector to be divided by (table value)<br>
       return value: table
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -738,7 +754,7 @@
                   B - vector to be checked (table value)<br>
       return value: boolean
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -753,7 +769,7 @@
                   B - vector to be multiplied by (table value)<br>
       return value: table
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -768,7 +784,7 @@
                   B - vector to be subtracted (table value)<br>
       return value: table
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -782,7 +798,7 @@
       parameters: Vector - vector to be serialized (table value)<br>
       return value: string
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -799,7 +815,7 @@
                   Z - coordinate (floating point value)<br>
       return value: table
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -813,7 +829,7 @@
       parameters: A - instance of a vector (table value)<br>
       return value: number
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -827,7 +843,7 @@
       parameters: A - instance of a vector (table value)<br>
       return value: number
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -841,7 +857,7 @@
       parameters: A - instance of a vector (table value)<br>
       return value: number
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
@@ -855,7 +871,7 @@
       parameters: A - instance of a vector (table value)<br>
       return value: number
     </p>
-    <p class="examples">
+    <p class="examples"><pre><code></code></pre>
 
     </p>
 
