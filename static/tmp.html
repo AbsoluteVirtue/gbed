@@ -126,7 +126,7 @@
       team ID has to be set beforehand, either in the editor or programmatically<br><br>
 
       parameters: Actor - instance of actor class<br>
-      return value: integer
+      return value: number
     </p>
     <p class="examples">
 
@@ -324,7 +324,7 @@
     <p class="description">
       ---<br><br>
 
-      return value: integer
+      return value: number
     </p>
     <p class="examples">
 
@@ -495,35 +495,90 @@
     <h2 id="a-gameplaystatistics">Gameplay Statistics</h2><a href="#a-categories-list">top</a>
 
     <h3>GetAllActorsOfClass</h3>
-    <p>
-      ---
+    <p class="declaration">
+      gameplaystatistics::GetAllActorsOfClass(Class)
+    </p>
+    <p class="description">
+      returns a list of instances of actor classes for a given class name<br><br>
+
+      parameters: Class - name of class<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetAllActorsOfClassWithTag</h3>
-    <p>
-      ---
+    <p class="declaration">
+      gameplaystatistics::GetAllActorsOfClassWithTag(Class, Tag)
+    </p>
+    <p class="description">
+      returns a list of instances of actor classes for a given class name and tag name<br><br>
+
+      parameters: Tag - name of tag<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>GetAllActorsWithTag</h3>
-    <p>
-      ---
+    <p class="declaration">
+      gameplaystatistics::GetAllActorsWithTag(Tag)
+    </p>
+    <p class="description">
+      returns a list of instances of actor classes for a given tag name<br><br>
+
+      parameters: Tag - name of tag<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>print</h3>
-    <p>
-      ---
+    <p class="declaration">
+      gameplaystatistics::print(Message)
+    </p>
+    <p class="description">
+      outputs a message to the log window (terminal)<br><br>
+
+      parameters: Message - null-terminated string<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
     </p>
 
     <h2 id="a-math">Math</h2><a href="#a-categories-list">top</a>
 
     <h3>random</h3>
-    <p>
-      ---
+    <p class="declaration">
+      math::random(Max)
+    </p>
+    <p class="description">
+      generates a random number for and up to a given maximum value<br><br>
+
+      parameters: Max - upper bound to be used for generating (integer or float value)<br>
+      return value: number
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>randomrange</h3>
-    <p>
-      ---
+    <p class="declaration">
+      math::randomrange(Min, Max)
+    </p>
+    <p class="description">
+      generates a random number for two given values that will act as minimum and maximum<br><br>
+
+      parameters: Min - lower bound to be used for generating (integer or float value)<br>
+                  Max - upper bound (integer or float value)<br>
+      return value: number
+    </p>
+    <p class="examples">
+
     </p>
 
     <h2 id="a-player">Player</h2><a href="#a-categories-list">top</a>
@@ -596,75 +651,212 @@
     <h2 id="a-timer">Timer</h2><a href="#a-categories-list">top</a>
 
     <h3>Clear</h3>
-    <p>
-      ---
+    <p class="declaration">
+      timer::Clear(InTable, InKey)
+    </p>
+    <p class="description">
+      clears a timer clock previously started in Set with given key for given list<br><br>
+
+      parameters: InTable - list of ... (table value)<br>
+                  InKey - name of ... (string value)<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>ClearAll</h3>
-    <p>
-      ---
+    <p class="declaration">
+      timer::ClearAll()
+    </p>
+    <p class="description">
+      clears all currently running timer clocks<br><br>
+
+      return value: nil
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>Set</h3>
-    <p>
-      ---
+    <p class="declaration">
+      timer::Set(InTable, InKey, InRate, InLoop)
+    </p>
+    <p class="description">
+      sets a timer clock<br><br>
+
+      parameters: InTable - list of ... (table value)<br>
+                  InKey - name of ... (string value)<br>
+                  InRate - tick rate (number value)<br>
+                  InLoop - toggle ... (boolean value)<br>
+      return value: nil
+    </p>
+    <p class="examples">
+
     </p>
 
     <h2 id="a-vector">Vector</h2><a href="#a-categories-list">top</a>
 
     <h3>__add</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::__add(A, B)
+    </p>
+    <p class="description">
+      constructs a new vector that is a sum of two given vectors<br><br>
+
+      parameters: A - vector to be added to (table value)<br>
+                  B - vector to be added (table value)<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>__div</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::__div(A, B)
+    </p>
+    <p class="description">
+      constructs a new vector that is a result of dividing two given vectors<br><br>
+
+      parameters: A - vector to be divided (table value)<br>
+                  B - vector to be divided by (table value)<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>__eq</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::__div(A, B)
+    </p>
+    <p class="description">
+      checks whether the two given vectors are equal or not<br><br>
+
+      parameters: A - vector to be checked (table value)<br>
+                  B - vector to be checked (table value)<br>
+      return value: boolean
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>__mul</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::__mul(A, B)
+    </p>
+    <p class="description">
+      constructs a new vector that is a result of multiplying two given vectors<br><br>
+
+      parameters: A - vector to be multiplied (table value)<br>
+                  B - vector to be multiplied by (table value)<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>__sub</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::__sub(A, B)
+    </p>
+    <p class="description">
+      constructs a new vector that is a result of subtracting two given vectors<br><br>
+
+      parameters: A - vector to be subtracted from (table value)<br>
+                  B - vector to be subtracted (table value)<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>__tostring</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::__tostring(Vector)
+    </p>
+    <p class="description">
+      returns a string representation of a given vector<br><br>
+
+      parameters: Vector - vector to be serialized (table value)<br>
+      return value: string
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>new</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::new(Package, X, Y, Z)
+    </p>
+    <p class="description">
+      constructs a new vector with given starting values<br><br>
+
+      parameters: Package - instance of a vector (table value)<br>
+                  X - coordinate (floating point value)<br>
+                  Y - coordinate (floating point value)<br>
+                  Z - coordinate (floating point value)<br>
+      return value: table
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>Size</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::Size(A)
+    </p>
+    <p class="description">
+      returns the length of a given vector<br><br>
+
+      parameters: A - instance of a vector (table value)<br>
+      return value: number
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>SizeSq</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::Size(A)
+    </p>
+    <p class="description">
+      returns the squared length of a given vector<br><br>
+
+      parameters: A - instance of a vector (table value)<br>
+      return value: number
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>SizeSq2D</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::SizeSq2D(A)
+    </p>
+    <p class="description">
+      returns the length of a given vector<br><br>
+
+      parameters: A - instance of a vector (table value)<br>
+      return value: number
+    </p>
+    <p class="examples">
+
     </p>
 
     <h3>Size2D</h3>
-    <p>
-      ---
+    <p class="declaration">
+      vector::Size2D(A)
+    </p>
+    <p class="description">
+      returns the length of a given vector<br><br>
+
+      parameters: A - instance of a vector (table value)<br>
+      return value: number
+    </p>
+    <p class="examples">
+
     </p>
 
 </body>
