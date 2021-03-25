@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <head>
-    <style>
-        .main-content {
-          height: 100vh;
-          text-align: justify;
-        }
-        h2 {
-          color: #1c87c9;
-        }
-        h2:target {
-          color: white;
-          background: #1c87c9;
-        }
-        code { 
-            background: hsl(220, 80%, 90%); 
-        }
-        pre {
-            white-space: pre-wrap;
-            background: hsl(30, 80%, 90%);
-        }
-        </style>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <style>
+    .description {
+      white-space: pre;
+    }
+    .examples {
+      white-space: pre;
+    }
+    .output {
+      font-family: 'Consolas';
+      font-size: 15px;
+      white-space: pre;
+      display: inline-block;
+      background-color: #434649;
+      border: rgb(80, 83, 86) 1px solid;
+    }
+
+    a {
+      color: rgb(136, 204, 255);
+    }
+    a:hover
+    {
+      color: rgb(153, 221, 255);
+    }
+    body {
+      color: rgba(255, 255, 255, 85%);
+      background-color: #202326;
+      font-family: 'Calibri';
+      font-size: 17px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    code {
+      font-family: 'Consolas';
+      font-size: 15px;
+      display: inline-block;
+      border: rgb(80, 83, 86) 1px solid;
+      background-color: rgb(32, 37, 49);
+    }
+    h2:target {
+      color: #1c87c9;
+    }
+    pre {
+        white-space: pre-wrap;
+    }
+  </style>
 </head>
 
 <body>
@@ -38,841 +64,849 @@
     <h2 id="a-actor">Actor</h2><a href="#a-categories-list">top</a>
 
     <h3>__tostring</h3>
-    <p class="declaration">
+    <div class="declaration">
       actor::__tostring(Actor)
-    </p>
-    <p class="description">
-      converts an actor class instance to a string<br><br>
+    </div>
+    <div class="description">
+      converts an actor class instance to a string
 
-      parameters: Actor - instance of actor class (userdata value)<br>
-      return value: string
-    </p>
-    <p class="examples">
-      <pre><code>
-        function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)
+      parameters: Actor - instance of actor class (<b>userdata</b> value)
+      return value: <b>string</b>
+    </div>
+    examples:
+    <div class="examples">
+      1.
+      <code>
+        function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)       
           print(actor.__tostring(GameTrigger))
           print(actor.__tostring(Character))
         end
-      </code></pre>
-    </p>
+      </code>
 
-    <h3>AddTag</h3><button class="filter-tag">#tag</button>
-    <p class="declaration">
+      output:
+      <div class="output">
+        LogLuaMachine: GBGameTrigger_0000000001
+        LogLuaMachine: BP_Character_C_2147479205          
+      </div>
+    </div>
+
+    <h3>AddTag</h3>
+    <div class="declaration">
       actor::AddTag(Actor, Tag)
-    </p>
-    <p class="description">
-      adds a tag to the list of a given actor's tags<br><br>
+    </div>
+    <div class="description">
+      adds a tag to the list of a given actor's tags
 
-      parameters: Actor - instance of actor class (userdata value)<br>
-                  Tag - string to be added (string value)<br>
+      parameters: Actor - instance of actor class (userdata value)
+                  Tag - string to be added (string value)
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code>
+    </div>
+    <div class="examples">
+      <code>
 
-      </code></pre>
-    </p>
+      </code>
+    </div>
 
     <h3>GetLocation</h3>
-    <p class="declaration">
+    <div class="declaration">
       actor::GetLocation(Actor)
-    </p>
-    <p class="description">
-      ---<br><br>
+    </div>
+    <div class="description">
+      ---
 
-      parameters: Actor - instance of actor class<br>
+      parameters: Actor - instance of actor class
       return value: table
-    </p>
-    <p class="examples">
-      <pre><code>
+    </div>
+    <div class="examples">
+      <code>
 
-      </code></pre>
-    </p>
+      </code>
+    </div>
 
-    <h3>GetOverlaps</h3><button class="filter-trigger">#trigger</button>
-    <p class="declaration">
+    <h3>GetOverlaps</h3><button class="filter">#trigger</button>
+    <div class="declaration">
       actor::GetOverlaps(Actor, Class)
-    </p>
-    <p class="description">
-      ---<br><br>
+    </div>
+    <div class="description">
+      ---
 
-      parameters: Actor - instance of actor class<br>
-                  Class - name of actor class<br>
+      parameters: Actor - instance of actor class
+                  Class - name of actor class
       return value: table
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h3>GetTag</h3><button class="filter-tag">#tag</button>
-    <p class="declaration">
+    <div class="declaration">
       actor::GetTag(Actor, Index)
-    </p>
-    <p class="description">
-      returns a tag at a given index from a list of a given actor's tags<br><br>
+    </div>
+    <div class="description">
+      returns a tag at a given index from a list of a given actor's tags
 
-      parameters: Actor - instance of actor class<br>
-                  Index - index inside list of tags (integer value starting with 1)<br>
+      parameters: Actor - instance of actor class
+                  Index - index inside list of tags (integer value starting with 1)
       return value: string
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h3>GetTags</h3><button class="filter-tag">#tag</button>
-    <p class="declaration">
+    <div class="declaration">
       actor::GetTags(Actor)
-    </p>
-    <p class="description">
-      returns a list of tags of a given actor<br><br>
+    </div>
+    <div class="description">
+      returns a list of tags of a given actor
 
-      parameters: Actor - instance of actor class<br>
+      parameters: Actor - instance of actor class
       return value: table
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h3>GetTeamId</h3>
-    <p class="declaration">
+    <div class="declaration">
       actor::GetTeamId(Actor)
-    </p>
-    <p class="description">
-      returns the identification number representing the given actor's team<br>
-      team ID has to be set beforehand, either in the editor or programmatically<br><br>
+    </div>
+    <div class="description">
+      returns the identification number representing the given actor's team
+      team ID has to be set beforehand, either in the editor or programmatically
 
-      parameters: Actor - instance of actor class<br>
+      parameters: Actor - instance of actor class
       return value: number
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h3>HasTag</h3><button class="filter-tag">#tag</button>
-    <p class="declaration">
+    <div class="declaration">
       actor::HasTag(Actor, Tag)
-    </p>
-    <p class="description">
-      checks the list of a given actor's tags for a match with a specific string<br><br>
+    </div>
+    <div class="description">
+      checks the list of a given actor's tags for a match with a specific string
 
-      parameters: Actor - instance of actor class (userdata value)<br>
-                  Tag - string to be searched<br>
+      parameters: Actor - instance of actor class (userdata value)
+                  Tag - string to be searched
       return value: boolean
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
     
     <h3>IsActive</h3>
-    <p class="declaration">
+    <div class="declaration">
       actor::IsActive(Actor)
-    </p>
-    <p class="description">
-      checks if the given actor has been activated<br><br>
+    </div>
+    <div class="description">
+      checks if the given actor has been activated
 
-      parameters: Actor - instance of actor class<br>
+      parameters: Actor - instance of actor class
       return value: boolean
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>  
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>  
         
     <h3>IsOverlapping</h3><button class="filter-trigger">#trigger</button>
-    <p class="declaration">
+    <div class="declaration">
       actor::IsOverlapping(Actor, OtherActor)
-    </p>
-    <p class="description">
-      checks if the two given actor are ovelapping<br><br>
+    </div>
+    <div class="description">
+      checks if the two given actor are ovelapping
 
-      parameters: Actor - instance of actor class<br>
-                  OtherActor - instance of actor class<br>
+      parameters: Actor - instance of actor class
+                  OtherActor - instance of actor class
       return value: boolean
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>  
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>  
             
     <h3>RemoveTag</h3><button class="filter-tag">#tag</button>
-    <p class="declaration">
+    <div class="declaration">
       actor::RemoveTag(Actor, Tag)
-    </p>
-    <p class="description">
-      removes a tag from the list of a given actor's tags<br><br>
+    </div>
+    <div class="description">
+      removes a tag from the list of a given actor's tags
 
-      parameters: Actor - instance of actor class<br>
-                  Tag - string to be added<br>
+      parameters: Actor - instance of actor class
+                  Tag - string to be added
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>  
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>  
                 
     <h3>SetActive</h3>
-    <p class="declaration">
+    <div class="declaration">
       actor::SetActive(Actor, NewActive)
-    </p>
-    <p class="description">
-      toggle a given actor's active status<br><br>
+    </div>
+    <div class="description">
+      toggle a given actor's active status
 
-      parameters: Actor - instance of actor class<br>
-                  NewActive - boolean value to be applied (true or false)<br>
+      parameters: Actor - instance of actor class
+                  NewActive - boolean value to be applied (true or false)
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>  
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>  
                     
     <h3>SetEnableCollision</h3><button class="filter-trigger">#trigger</button>
-    <p class="declaration">
+    <div class="declaration">
       actor::SetEnableCollision(Actor, Enabled)
-    </p>
-    <p class="description">
-      toggle a given actor's collision processing<br><br>
+    </div>
+    <div class="description">
+      toggle a given actor's collision processing
 
-      parameters: Actor - instance of actor class<br>
-                  Enabled - boolean value to be applied (true or false)<br>
+      parameters: Actor - instance of actor class
+                  Enabled - boolean value to be applied (true or false)
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>  
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>  
                         
     <h3>SetHidden</h3>
-    <p class="declaration">
+    <div class="declaration">
       actor::SetHidden(Actor, Hidden)
-    </p>
-    <p class="description">
-      toggle a given actor's hidden setting<br><br>
+    </div>
+    <div class="description">
+      toggle a given actor's hidden setting
 
-      parameters: Actor - instance of actor class<br>
-                  Hidden - boolean value to be applied (true or false)<br>
+      parameters: Actor - instance of actor class
+                  Hidden - boolean value to be applied (true or false)
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>   
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>   
                             
     <h3>SetTeamId</h3>
-    <p class="declaration">
+    <div class="declaration">
       actor::SetTeamId(Actor, TeamId)
-    </p>
-    <p class="description">
-      sets the identification number of the given actor's team<br><br>
+    </div>
+    <div class="description">
+      sets the identification number of the given actor's team
 
-      parameters: Actor - instance of actor class<br>
-                  TeamId - identifier to be set for given actor (integer value)<br>
+      parameters: Actor - instance of actor class
+                  TeamId - identifier to be set for given actor (integer value)
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h2 id="a-ai">AI</h2><a href="#a-categories-list">top</a>
 
     <h3>CleanUp</h3>
-    <p class="declaration">
+    <div class="declaration">
       ai::CleanUp(AIControllerTag)
-    </p>
-    <p class="description">
-      removes all AI-controlled characters of a given type<br><br>
+    </div>
+    <div class="description">
+      removes all AI-controlled characters of a given type
 
-      parameters: AIControllerTag - name of controller<br>
+      parameters: AIControllerTag - name of controller
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h3>Create</h3>
-    <p class="declaration">
+    <div class="declaration">
       ai::Create(SpawnPoint, AIControllerTag, FreezeTime)
-    </p>
-    <p class="description">
-      create an AI-controlled character at a given spawn point<br><br>
+    </div>
+    <div class="description">
+      create an AI-controlled character at a given spawn point
 
-      parameters: SpawnPoint - instance of spawner-actor class<br>
-                  AIControllerTag - name of controller<br>
-                  FreezeTime - delay in seconds before activating requested character (floating-point value)<br>
+      parameters: SpawnPoint - instance of spawner-actor class
+                  AIControllerTag - name of controller
+                  FreezeTime - delay in seconds before activating requested character (floating-point value)
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h3>CreateOverDuration</h3>
-    <p class="declaration">
+    <div class="declaration">
       ai::CreateOverDuration(Duration, Count, OrderedSpawnPoints, AIControllerTag)
-    </p>
-    <p class="description">
-      create an AI-controlled character at a given spawn point<br><br>
+    </div>
+    <div class="description">
+      create an AI-controlled character at a given spawn point
 
-      parameters: Duration - delay in seconds spawning characters (floating-point value)<br>
-                  Count - number of characters to spawn (integer value)<br>
-                  OrderedSpawnPoints - list of instances of spawner-actor class<br>
-                  AIControllerTag - name of controller<br>
+      parameters: Duration - delay in seconds spawning characters (floating-point value)
+                  Count - number of characters to spawn (integer value)
+                  OrderedSpawnPoints - list of instances of spawner-actor class
+                  AIControllerTag - name of controller
       return value: nil
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h3>GetControllers</h3>
-    <p class="declaration">
+    <div class="declaration">
       ai::GetControllers(Class, Tag, TeamId, SquadId)
-    </p>
-    <p class="description">
-      create an AI-controlled character at a given spawn point<br><br>
+    </div>
+    <div class="description">
+      create an AI-controlled character at a given spawn point
 
-      parameters: Class - name of class<br>
-                  Tag - name of previousy added tag<br>
-                  TeamId - identifier representing character's team (integer value)<br>
-                  SquadId - identifier representing character's squad (integer value)<br>
+      parameters: Class - name of class
+                  Tag - name of previousy added tag
+                  TeamId - identifier representing character's team (integer value)
+                  SquadId - identifier representing character's squad (integer value)
       return value: table
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h3>GetMaxCount</h3>
-    <p class="declaration">
+    <div class="declaration">
       ai::GetMaxCount()
-    </p>
-    <p class="description">
-      ---<br><br>
+    </div>
+    <div class="description">
+      ---
 
       return value: number
-    </p>
-    <p class="examples">
-      <pre><code></code></pre>
-    </p>
+    </div>
+    <div class="examples">
+      <code></code>
+    </div>
 
     <h2 id="a-gamemode">Game Mode</h2><a href="#a-categories-list">top</a>
 
     <h3>AddGameRule</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>AddGameObjective</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h3>AddGameStat</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>AddGameSetting</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>AddObjectiveMarker</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>AddPlayerTeam</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>AddStringTable</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>BroadcastGameMessage</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>ClearGameObjectives</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>ClearGameStats</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>ClearRoundStageTime</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>EnterPlayArea</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h3>EnterReadyRoom</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetBestLateComerInsertionPoint</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetGameOption</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetInsertionPointName</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetPlayerCount</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h3>GetPlayerList</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetReadyPlayerTeamCounts</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetRoundStage</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetRoundStageTime</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetScript</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>HasGameOption</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>HasGameRule</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>MakeEveryoneSpectate</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>PrepLatecomer</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
         
     <h3>RemoveGameRule</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>SendEveryoneToReadyRoom</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>SendEveryoneToPlayArea</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>SetRoundStage</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>SetRoundStageTime</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>SetTeamAttitude</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h2 id="a-gameplaystatistics">Gameplay Statistics</h2><a href="#a-categories-list">top</a>
 
     <h3>GetAllActorsOfClass</h3>
-    <p class="declaration">
+    <div class="declaration">
       gameplaystatistics::GetAllActorsOfClass(Class)
-    </p>
-    <p class="description">
-      returns a list of instances of actor classes for a given class name<br><br>
+    </div>
+    <div class="description">
+      returns a list of instances of actor classes for a given class name
 
-      parameters: Class - name of class<br>
+      parameters: Class - name of class
       return value: table
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>GetAllActorsOfClassWithTag</h3>
-    <p class="declaration">
+    <div class="declaration">
       gameplaystatistics::GetAllActorsOfClassWithTag(Class, Tag)
-    </p>
-    <p class="description">
-      returns a list of instances of actor classes for a given class name and tag name<br><br>
+    </div>
+    <div class="description">
+      returns a list of instances of actor classes for a given class name and tag name
 
-      parameters: Tag - name of tag<br>
+      parameters: Tag - name of tag
       return value: table
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>GetAllActorsWithTag</h3>
-    <p class="declaration">
+    <div class="declaration">
       gameplaystatistics::GetAllActorsWithTag(Tag)
-    </p>
-    <p class="description">
-      returns a list of instances of actor classes for a given tag name<br><br>
+    </div>
+    <div class="description">
+      returns a list of instances of actor classes for a given tag name
 
-      parameters: Tag - name of tag<br>
+      parameters: Tag - name of tag
       return value: table
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>print</h3>
-    <p class="declaration">
+    <div class="declaration">
       gameplaystatistics::print(Message)
-    </p>
-    <p class="description">
-      outputs a message to the log window (terminal)<br><br>
+    </div>
+    <div class="description">
+      outputs a message to the log window (terminal)
 
-      parameters: Message - null-terminated string<br>
+      parameters: Message - null-terminated string
       return value: nil
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h2 id="a-math">Math</h2><a href="#a-categories-list">top</a>
 
     <h3>random</h3>
-    <p class="declaration">
+    <div class="declaration">
       math::random(Max)
-    </p>
-    <p class="description">
-      generates a random number for and up to a given maximum value<br><br>
+    </div>
+    <div class="description">
+      generates a random number for and up to a given maximum value
 
-      parameters: Max - upper bound to be used for generating (integer or float value)<br>
+      parameters: Max - upper bound to be used for generating (integer or float value)
       return value: number
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>randomrange</h3>
-    <p class="declaration">
+    <div class="declaration">
       math::randomrange(Min, Max)
-    </p>
-    <p class="description">
-      generates a random number for two given values that will act as minimum and maximum<br><br>
+    </div>
+    <div class="description">
+      generates a random number for two given values that will act as minimum and maximum
 
-      parameters: Min - lower bound to be used for generating (integer or float value)<br>
-                  Max - upper bound (integer or float value)<br>
+      parameters: Min - lower bound to be used for generating (integer or float value)
+                  Max - upper bound (integer or float value)
       return value: number
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h2 id="a-player">Player</h2><a href="#a-categories-list">top</a>
 
     <h3>FreezePlayer</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3>GetCharacter</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
         
     <h3>GetInsertionPoint</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
             
     <h3>GetInventory</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
                 
     <h3>GetLives</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
                     
     <h3>GetPlayerState</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
                         
     <h3>HasItemWithTag</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
                         
     <h3>IsAlive</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h3>SetAllowedToRestart</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h3>SetInsertionPoint</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h3>SetLives</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h3>ShowGameMessage</h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
     
     <h3></h3>
-    <p>
+    <div>
       ---
-    </p>
+    </div>
 
     <h2 id="a-timer">Timer</h2><a href="#a-categories-list">top</a>
 
     <h3>Clear</h3>
-    <p class="declaration">
+    <div class="declaration">
       timer::Clear(InTable, InKey)
-    </p>
-    <p class="description">
-      clears a timer clock previously started in Set with given key for given list<br><br>
+    </div>
+    <div class="description">
+      clears a timer clock previously started in Set with given key for given list
 
-      parameters: InTable - list of ... (table value)<br>
-                  InKey - name of ... (string value)<br>
+      parameters: InTable - list of ... (table value)
+                  InKey - name of ... (string value)
       return value: nil
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>ClearAll</h3>
-    <p class="declaration">
+    <div class="declaration">
       timer::ClearAll()
-    </p>
-    <p class="description">
-      clears all currently running timer clocks<br><br>
+    </div>
+    <div class="description">
+      clears all currently running timer clocks
 
       return value: nil
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>Set</h3>
-    <p class="declaration">
+    <div class="declaration">
       timer::Set(InTable, InKey, InRate, InLoop)
-    </p>
-    <p class="description">
-      sets a timer clock<br><br>
+    </div>
+    <div class="description">
+      sets a timer clock
 
-      parameters: InTable - list of ... (table value)<br>
-                  InKey - name of ... (string value)<br>
-                  InRate - tick rate (number value)<br>
-                  InLoop - toggle ... (boolean value)<br>
+      parameters: InTable - list of ... (table value)
+                  InKey - name of ... (string value)
+                  InRate - tick rate (number value)
+                  InLoop - toggle ... (boolean value)
       return value: nil
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h2 id="a-vector">Vector</h2><a href="#a-categories-list">top</a>
 
     <h3>__add</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::__add(A, B)
-    </p>
-    <p class="description">
-      constructs a new vector that is a sum of two given vectors<br><br>
+    </div>
+    <div class="description">
+      constructs a new vector that is a sum of two given vectors
 
-      parameters: A - vector to be added to (table value)<br>
-                  B - vector to be added (table value)<br>
+      parameters: A - vector to be added to (table value)
+                  B - vector to be added (table value)
       return value: table
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>__div</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::__div(A, B)
-    </p>
-    <p class="description">
-      constructs a new vector that is a result of dividing two given vectors<br><br>
+    </div>
+    <div class="description">
+      constructs a new vector that is a result of dividing two given vectors
 
-      parameters: A - vector to be divided (table value)<br>
-                  B - vector to be divided by (table value)<br>
+      parameters: A - vector to be divided (table value)
+                  B - vector to be divided by (table value)
       return value: table
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>__eq</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::__div(A, B)
-    </p>
-    <p class="description">
-      checks whether the two given vectors are equal or not<br><br>
+    </div>
+    <div class="description">
+      checks whether the two given vectors are equal or not
 
-      parameters: A - vector to be checked (table value)<br>
-                  B - vector to be checked (table value)<br>
+      parameters: A - vector to be checked (table value)
+                  B - vector to be checked (table value)
       return value: boolean
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>__mul</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::__mul(A, B)
-    </p>
-    <p class="description">
-      constructs a new vector that is a result of multiplying two given vectors<br><br>
+    </div>
+    <div class="description">
+      constructs a new vector that is a result of multiplying two given vectors
 
-      parameters: A - vector to be multiplied (table value)<br>
-                  B - vector to be multiplied by (table value)<br>
+      parameters: A - vector to be multiplied (table value)
+                  B - vector to be multiplied by (table value)
       return value: table
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>__sub</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::__sub(A, B)
-    </p>
-    <p class="description">
-      constructs a new vector that is a result of subtracting two given vectors<br><br>
+    </div>
+    <div class="description">
+      constructs a new vector that is a result of subtracting two given vectors
 
-      parameters: A - vector to be subtracted from (table value)<br>
-                  B - vector to be subtracted (table value)<br>
+      parameters: A - vector to be subtracted from (table value)
+                  B - vector to be subtracted (table value)
       return value: table
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>__tostring</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::__tostring(Vector)
-    </p>
-    <p class="description">
-      returns a string representation of a given vector<br><br>
+    </div>
+    <div class="description">
+      returns a string representation of a given vector
 
-      parameters: Vector - vector to be serialized (table value)<br>
+      parameters: Vector - vector to be serialized (table value)
       return value: string
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>new</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::new(Package, X, Y, Z)
-    </p>
-    <p class="description">
-      constructs a new vector with given starting values<br><br>
+    </div>
+    <div class="description">
+      constructs a new vector with given starting values
 
-      parameters: Package - instance of a vector (table value)<br>
-                  X - coordinate (floating point value)<br>
-                  Y - coordinate (floating point value)<br>
-                  Z - coordinate (floating point value)<br>
+      parameters: Package - instance of a vector (table value)
+                  X - coordinate (floating point value)
+                  Y - coordinate (floating point value)
+                  Z - coordinate (floating point value)
       return value: table
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>Size</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::Size(A)
-    </p>
-    <p class="description">
-      returns the length of a given vector<br><br>
+    </div>
+    <div class="description">
+      returns the length of a given vector
 
-      parameters: A - instance of a vector (table value)<br>
+      parameters: A - instance of a vector (table value)
       return value: number
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>SizeSq</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::Size(A)
-    </p>
-    <p class="description">
-      returns the squared length of a given vector<br><br>
+    </div>
+    <div class="description">
+      returns the squared length of a given vector
 
-      parameters: A - instance of a vector (table value)<br>
+      parameters: A - instance of a vector (table value)
       return value: number
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>SizeSq2D</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::SizeSq2D(A)
-    </p>
-    <p class="description">
-      returns the length of a given vector<br><br>
+    </div>
+    <div class="description">
+      returns the length of a given vector
 
-      parameters: A - instance of a vector (table value)<br>
+      parameters: A - instance of a vector (table value)
       return value: number
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
     <h3>Size2D</h3>
-    <p class="declaration">
+    <div class="declaration">
       vector::Size2D(A)
-    </p>
-    <p class="description">
-      returns the length of a given vector<br><br>
+    </div>
+    <div class="description">
+      returns the length of a given vector
 
-      parameters: A - instance of a vector (table value)<br>
+      parameters: A - instance of a vector (table value)
       return value: number
-    </p>
-    <p class="examples"><pre><code></code></pre>
+    </div>
+    <div class="examples"><code></code>
 
-    </p>
+    </div>
 
 </body>
