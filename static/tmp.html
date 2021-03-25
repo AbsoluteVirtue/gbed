@@ -127,7 +127,7 @@
       </code>
 	</div>
 
-	<h3>GetOverlaps</h3><button class="filter">#trigger</button>
+	<h3>GetOverlaps</h3>
 	<div class="declaration">
 		actor::GetOverlaps(Actor, Class)
 	</div>
@@ -142,7 +142,7 @@
 		<code></code>
 	</div>
 
-	<h3>GetTag</h3><button class="filter-tag">#tag</button>
+	<h3>GetTag</h3>
 	<div class="declaration">
 		actor::GetTag(Actor, Index)
 	</div>
@@ -157,7 +157,7 @@
 		<code></code>
 	</div>
 
-	<h3>GetTags</h3><button class="filter-tag">#tag</button>
+	<h3>GetTags</h3>
 	<div class="declaration">
 		actor::GetTags(Actor)
 	</div>
@@ -186,7 +186,7 @@
 		<code></code>
 	</div>
 
-	<h3>HasTag</h3><button class="filter-tag">#tag</button>
+	<h3>HasTag</h3>
 	<div class="declaration">
 		actor::HasTag(Actor, Tag)
 	</div>
@@ -196,9 +196,6 @@
 		parameters: Actor - instance of actor class (userdata value)
 		Tag - string to be searched
 		return value: boolean
-	</div>
-	<div class="examples">
-		<code></code>
 	</div>
 
 	<h3>IsActive</h3>
@@ -210,9 +207,6 @@
 
 		parameters: Actor - instance of actor class
 		return value: boolean
-	</div>
-	<div class="examples">
-		<code></code>
 	</div>
 
 	<h3>IsOverlapping</h3><button class="filter-trigger">#trigger</button>
@@ -226,9 +220,6 @@
 		OtherActor - instance of actor class
 		return value: boolean
 	</div>
-	<div class="examples">
-		<code></code>
-	</div>
 
 	<h3>RemoveTag</h3><button class="filter-tag">#tag</button>
 	<div class="declaration">
@@ -240,9 +231,6 @@
 		parameters: Actor - instance of actor class
 		Tag - name of tag to be added (<b>string</b> value)
 		return value: <b>nil</b>
-	</div>
-	<div class="examples">
-		<code></code>
 	</div>
 
 	<h3>SetActive</h3>
@@ -256,9 +244,6 @@
 		NewActive - boolean value to be applied (true or false)
 		return value: nil
 	</div>
-	<div class="examples">
-		<code></code>
-	</div>
 
 	<h3>SetEnableCollision</h3><button class="filter-trigger">#trigger</button>
 	<div class="declaration">
@@ -270,9 +255,6 @@
 		parameters: Actor - instance of actor class
 		Enabled - boolean value to be applied (true or false)
 		return value: nil
-	</div>
-	<div class="examples">
-		<code></code>
 	</div>
 
 	<h3>SetHidden</h3>
@@ -286,9 +268,6 @@
 		Hidden - boolean value to be applied (true or false)
 		return value: nil
 	</div>
-	<div class="examples">
-		<code></code>
-	</div>
 
 	<h3>SetTeamId</h3>
 	<div class="declaration">
@@ -300,9 +279,6 @@
 		parameters: Actor - instance of actor class
 		TeamId - identifier to be set for given actor (integer value)
 		return value: nil
-	</div>
-	<div class="examples">
-		<code></code>
 	</div>
 
 	<h2 id="a-ai">AI</h2><a href="#a-categories-list">top</a>
@@ -317,9 +293,6 @@
 		parameters: AIControllerTag - name of controller
 		return value: nil
 	</div>
-	<div class="examples">
-		<code></code>
-	</div>
 
 	<h3>Create</h3>
 	<div class="declaration">
@@ -332,9 +305,6 @@
 		AIControllerTag - name of controller
 		FreezeTime - delay in seconds before activating requested character (floating-point value)
 		return value: nil
-	</div>
-	<div class="examples">
-		<code></code>
 	</div>
 
 	<h3>CreateOverDuration</h3>
@@ -350,9 +320,6 @@
 		AIControllerTag - name of controller
 		return value: nil
 	</div>
-	<div class="examples">
-		<code></code>
-	</div>
 
 	<h3>GetControllers</h3>
 	<div class="declaration">
@@ -367,9 +334,6 @@
 		SquadId - identifier representing character's squad (integer value)
 		return value: table
 	</div>
-	<div class="examples">
-		<code></code>
-	</div>
 
 	<h3>GetMaxCount</h3>
 	<div class="declaration">
@@ -379,9 +343,6 @@
 		---
 
 		return value: <b>number</b>
-	</div>
-	<div class="examples">
-		<code></code>
 	</div>
 
 	<h2 id="a-gamemode">Game Mode</h2><a href="#a-categories-list">top</a>
@@ -411,73 +372,164 @@
 	</div>
 
 	<h3>AddGameStat</h3>
-	<div>
+	<div class="declaration">
+		gamemode::AddGameStat(GameStat)
+	</div>
+	<div class="description">
 		---
+
+		parameters: GameStat - name of statistic to be added (<b>string</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>AddGameSetting</h3>
-	<div>
+	<div class="declaration">
+		gamemode::AddGameSetting(Name, MinValue, MaxValue, IterateValue, DefaultValue)
+	</div>
+	<div class="description">
 		---
+
+		parameters: Name - name of setting to be added (<b>string</b> value)
+		MinValue - lower bound (integer) ... (<b>number</b> value)
+		MaxValue - upper bound (integer) ... (<b>number</b> value)
+		IterateValue - step (integer) ... (<b>string</b> value)
+		DefaultValue - default value (integer) ... (<b>string</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>AddObjectiveMarker</h3>
-	<div>
+	<div class="declaration">
+		gamemode::AddObjectiveMarker(Location, TeamId, Name, Active)
+	</div>
+	<div class="description">
 		---
+
+		parameters: Location - vector representing coordinates (<b>table</b> value)
+		TeamId - identifier representing character's team (<b>number</b> value)
+		Name - ... (<b>string</b> value)
+		Active - ... (<b>boolean</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>AddPlayerTeam</h3>
-	<div>
+	<div class="declaration">
+		gamemode::AddPlayerTeam(Team, Name, ProfileName)
+	</div>
+	<div class="description">
 		---
+
+		parameters: Team - identifier representing character's team (<b>number</b> value)
+		Name - ... (<b>string</b> value)
+		ProfileName - ... (<b>string</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>AddStringTable</h3>
-	<div>
+	<div class="declaration">
+		gamemode::AddStringTable(StringTableId)
+	</div>
+	<div class="description">
 		---
+
+		parameters: StringTableId - unique identifier for list/table (<b>string</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>BroadcastGameMessage</h3>
-	<div>
+	<div class="declaration">
+		gamemode::BroadcastGameMessage(GameMessageId, Duration)
+	</div>
+	<div class="description">
 		---
+
+		parameters: GameMessageId - unique identifier for message (<b>string</b> value)
+		Duration - delay in seconds (<b>number</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>ClearGameObjectives</h3>
-	<div>
+	<div class="declaration">
+		gamemode::ClearGameObjectives()
+	</div>
+	<div class="description">
 		---
+
+		return value: <b>nil</b>
 	</div>
 
 	<h3>ClearGameStats</h3>
-	<div>
+	<div class="declaration">
+		gamemode::ClearGameStats()
+	</div>
+	<div class="description">
 		---
+
+		return value: <b>nil</b>
 	</div>
 
 	<h3>ClearRoundStageTime</h3>
-	<div>
+	<div class="declaration">
+		gamemode::ClearRoundStageTime()
+	</div>
+	<div class="description">
 		---
+
+		return value: <b>nil</b>
 	</div>
 
 	<h3>EnterPlayArea</h3>
-	<div>
+	<div class="declaration">
+		gamemode::EnterPlayArea(Target)
+	</div>
+	<div class="description">
 		---
+
+		parameters: Target - instance of player class (<b>userdata</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>EnterReadyRoom</h3>
-	<div>
+	<div class="declaration">
+		gamemode::EnterReadyRoom(Target)
+	</div>
+	<div class="description">
 		---
+
+		parameters: Target - instance of player class (<b>userdata</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>GetBestLateComerInsertionPoint</h3>
-	<div>
+	<div class="declaration">
+		gamemode::GetBestLateComerInsertionPoint(Target)
+	</div>
+	<div class="description">
 		---
+
+		parameters: Target - instance of player class (<b>userdata</b> value)
+		return value: <b>userdata</b>
 	</div>
 
 	<h3>GetGameOption</h3>
-	<div>
+	<div class="declaration">
+		gamemode::GetGameOption(OptionName)
+	</div>
+	<div class="description">
 		---
+
+		parameters: OptionName - name of option (<b>string</b> value)
+		return value: <b>string</b>
 	</div>
 
 	<h3>GetInsertionPointName</h3>
-	<div>
+	<div class="declaration">
+		gamemode::GetInsertionPointName(InsertionPoint)
+	</div>
+	<div class="description">
 		---
+
+		parameters: InsertionPoint - instance of insertion point actor class (<b>userdata</b> value)
+		return value: <b>string</b>
 	</div>
 
 	<h3>GetPlayerCount</h3>
