@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <head>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-  <style>
-    .description {
-      white-space: pre;
-    }
-    .examples {
-      white-space: pre;
-    }
-    .output {
-      font-family: 'Consolas';
-      font-size: 15px;
-      white-space: pre;
-      display: inline-block;
-      background-color: #434649;
-      border: rgb(80, 83, 86) 1px solid;
-    }
+  	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<style>
+		.description {
+			white-space: pre;
+		}
+		.examples {
+			white-space: pre;
+		}
+		.output {
+			font-family: 'Consolas';
+			font-size: 15px;
+			white-space: pre;
+			display: inline-block;
+			background-color: #434649;
+			border: rgb(80, 83, 86) 1px solid;
+		}
 
-    a {
-      color: rgb(136, 204, 255);
-    }
-    a:hover
-    {
-      color: rgb(153, 221, 255);
-    }
-    body {
-      color: rgba(255, 255, 255, 85%);
-      background-color: #202326;
-      font-family: 'Calibri';
-      font-size: 17px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    code {
-      font-family: 'Consolas';
-      font-size: 15px;
-      display: inline-block;
-      border: rgb(80, 83, 86) 1px solid;
-      background-color: rgb(32, 37, 49);
-    }
-    h2:target {
-      color: #1c87c9;
-    }
-    pre {
-        white-space: pre-wrap;
-    }
-  </style>
+		a {
+			color: rgb(136, 204, 255);
+		}
+		a:hover
+		{
+			color: rgb(153, 221, 255);
+		}
+		body {
+			color: rgba(255, 255, 255, 85%);
+			background-color: #202326;
+			font-family: 'Calibri';
+			font-size: 17px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		code {
+			font-family: 'Consolas';
+			font-size: 15px;
+			display: inline-block;
+			border: rgb(80, 83, 86) 1px solid;
+			background-color: rgb(32, 37, 49);
+		}
+		h2:target {
+			color: #1c87c9;
+		}
+		pre {
+			white-space: pre-wrap;
+		}
+	</style>
 </head>
 
 <body>
@@ -65,47 +65,43 @@
 
     <h3>__tostring</h3>
     <div class="declaration">
-      actor::__tostring(Actor)
+		actor::__tostring(Actor)
     </div>
     <div class="description">
-      converts an actor class instance to a string
+      	converts an actor class instance to a string
 
-      parameters: Actor - instance of actor class (<b>userdata</b> value)
-      return value: <b>string</b>
+      	parameters:		Actor - instance of actor class (<b>userdata</b> value)
+      	return value: 	<b>string</b>
     </div>
     examples:
     <div class="examples">
-      1.
-      <code>
-        function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)       
-          print(actor.__tostring(GameTrigger))
-          print(actor.__tostring(Character))
-        end
-      </code>
+      	1.
+      	<code>
+	function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)	
+		print(actor.__tostring(GameTrigger))
+		print(actor.__tostring(Character))
+	end
+      	</code>
 
-      output:
-      <div class="output">
-        LogLuaMachine: GBGameTrigger_0000000001
-        LogLuaMachine: BP_Character_C_2147479205          
-      </div>
+output:
+	<div class="output">
+	LogLuaMachine: GBGameTrigger_0000000001
+	LogLuaMachine: BP_Character_C_2147479205	
+	</div>
     </div>
 
     <h3>AddTag</h3>
     <div class="declaration">
-      actor::AddTag(Actor, Tag)
+		actor::AddTag(Actor, Tag)
     </div>
     <div class="description">
-      adds a tag to the list of a given actor's tags
+		adds a tag to the list of a given actor's tags
 
-      parameters: Actor - instance of actor class (userdata value)
-                  Tag - string to be added (string value)
-      return value: nil
+		parameters:		Actor - instance of actor class (<b>userdata</b> value)
+						Tag - string to be added (<b>string</b> value)
+		return value: 	<b>nil</b>
     </div>
-    <div class="examples">
-      <code>
-
-      </code>
-    </div>
+    <div class="examples"></div>
 
     <h3>GetLocation</h3>
     <div class="declaration">
@@ -114,7 +110,7 @@
     <div class="description">
       ---
 
-      parameters: Actor - instance of actor class
+      parameters: 	Actor - instance of actor class
       return value: table
     </div>
     <div class="examples">
@@ -234,8 +230,8 @@
       removes a tag from the list of a given actor's tags
 
       parameters: Actor - instance of actor class
-                  Tag - string to be added
-      return value: nil
+                  Tag - name of tag to be added (<b>string</b> value)
+      return value: <b>nil</b>
     </div>
     <div class="examples">
       <code></code>
@@ -554,9 +550,6 @@
       parameters: Class - name of class
       return value: table
     </div>
-    <div class="examples"><code></code>
-
-    </div>
 
     <h3>GetAllActorsOfClassWithTag</h3>
     <div class="declaration">
@@ -568,9 +561,7 @@
       parameters: Tag - name of tag
       return value: table
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>GetAllActorsWithTag</h3>
     <div class="declaration">
@@ -582,9 +573,7 @@
       parameters: Tag - name of tag
       return value: table
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>print</h3>
     <div class="declaration">
@@ -596,9 +585,7 @@
       parameters: Message - null-terminated string
       return value: nil
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h2 id="a-math">Math</h2><a href="#a-categories-list">top</a>
 
@@ -612,9 +599,7 @@
       parameters: Max - upper bound to be used for generating (integer or float value)
       return value: number
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>randomrange</h3>
     <div class="declaration">
@@ -627,75 +612,162 @@
                   Max - upper bound (integer or float value)
       return value: number
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h2 id="a-player">Player</h2><a href="#a-categories-list">top</a>
 
     <h3>FreezePlayer</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::FreezePlayer(Player, Duration)
     </div>
+    <div class="description">
+      	delays activation of a player instance
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+		  			Duration - delay in seconds (<b>number</b> value)
+      	return value: 	<b>nil</b>
+    </div>
+
     
     <h3>GetCharacter</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::GetCharacter(Player)
+    </div>
+    <div class="description">
+      	returns instance of character class for a given player instance
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+      	return value: 	<b>userdata</b>
     </div>
         
     <h3>GetInsertionPoint</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::GetInsertionPoint(Player)
+    </div>
+    <div class="description">
+      	returns instance of insertion point actor class for a given player instance
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+      	return value: 	<b>userdata</b>
     </div>
             
     <h3>GetInventory</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::GetInventory(Player)
+    </div>
+    <div class="description">
+      	returns a list of items owned by a given player instance
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+      	return value: 	<b>table</b>
     </div>
                 
     <h3>GetLives</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::GetLives(Player)
+    </div>
+    <div class="description">
+      	---
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+      	return value: 	<b>userdata</b>
     </div>
                     
     <h3>GetPlayerState</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::GetPlayerState(Player)
+    </div>
+    <div class="description">
+      	---
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+      	return value: 	<b>userdata</b>
     </div>
                         
     <h3>HasItemWithTag</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::HasItemWithTag(Player, Tag)
+    </div>
+    <div class="description">
+      	check if a given player instance owns an item with a given tag or not
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+					Tag - name of tag (<b>string</b> value)
+      	return value: 	<b>boolean</b>
     </div>
                         
     <h3>IsAlive</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::IsAlive(Player)
+    </div>
+    <div class="description">
+      	checks if a given player instance is alive or dead
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+      	return value: 	<b>boolean</b>
     </div>
 
     <h3>SetAllowedToRestart</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::SetAllowedToRestart(Player, Allowed)
+    </div>
+    <div class="description">
+      	toggles whether a player instance is allowed to restart the match or not
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+					Allowed - <b>boolean</b> value to be applied (true or false)
+      	return value: 	<b>nil</b>
     </div>
 
     <h3>SetInsertionPoint</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::SetInsertionPoint(Player, NewInsertionPoint)
+    </div>
+    <div class="description">
+		sets an instance of insertion point actor class for a given player instance
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+		  			NewInsertionPoint - instance of insertion point class (<b>userdata</b> value)
+      	return value: 	<b>nil</b>
     </div>
 
     <h3>SetLives</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::SetLives(Player, NewLives)
+    </div>
+    <div class="description">
+      	---
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+		  			NewLives - amount (integer) to set player lives to (<b>number</b> value)
+      	return value: 	<b>nil</b>
     </div>
 
     <h3>ShowGameMessage</h3>
-    <div>
-      ---
+    <div class="declaration">
+		player::SetLives(Player, Message, Duration)
+    </div>
+    <div class="description">
+      	display a text message to a given player
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+		  			Message - text to display (<b>string</b> value)
+		  			Duration - delay in seconds before text disappears (<b>number</b> value)
+      	return value: 	<b>nil</b>
     </div>
     
-    <h3></h3>
-    <div>
-      ---
+    <h3>ShowWorldPrompt</h3>
+    <div class="declaration">
+		player::SetLives(Player, Location, Tag, Duration)
+    </div>
+    <div class="description">
+      	---
+
+      	parameters:		Player - instance of player class (<b>userdata</b> value)
+		  			Location - vector pointing to location (<b>table</b> value)
+		  			Tag - name of tag (<b>string</b> value)
+		  			Duration - delay in seconds before text disappears (<b>number</b> value)
+      	return value: 	<b>nil</b>
     </div>
 
     <h2 id="a-timer">Timer</h2><a href="#a-categories-list">top</a>
@@ -711,9 +783,6 @@
                   InKey - name of ... (string value)
       return value: nil
     </div>
-    <div class="examples"><code></code>
-
-    </div>
 
     <h3>ClearAll</h3>
     <div class="declaration">
@@ -724,9 +793,7 @@
 
       return value: nil
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>Set</h3>
     <div class="declaration">
@@ -741,9 +808,7 @@
                   InLoop - toggle ... (boolean value)
       return value: nil
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h2 id="a-vector">Vector</h2><a href="#a-categories-list">top</a>
 
@@ -758,9 +823,7 @@
                   B - vector to be added (table value)
       return value: table
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>__div</h3>
     <div class="declaration">
@@ -773,9 +836,7 @@
                   B - vector to be divided by (table value)
       return value: table
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>__eq</h3>
     <div class="declaration">
@@ -788,9 +849,7 @@
                   B - vector to be checked (table value)
       return value: boolean
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>__mul</h3>
     <div class="declaration">
@@ -803,9 +862,7 @@
                   B - vector to be multiplied by (table value)
       return value: table
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>__sub</h3>
     <div class="declaration">
@@ -818,9 +875,7 @@
                   B - vector to be subtracted (table value)
       return value: table
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>__tostring</h3>
     <div class="declaration">
@@ -832,9 +887,7 @@
       parameters: Vector - vector to be serialized (table value)
       return value: string
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>new</h3>
     <div class="declaration">
@@ -849,9 +902,7 @@
                   Z - coordinate (floating point value)
       return value: table
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>Size</h3>
     <div class="declaration">
@@ -863,9 +914,7 @@
       parameters: A - instance of a vector (table value)
       return value: number
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>SizeSq</h3>
     <div class="declaration">
@@ -877,9 +926,7 @@
       parameters: A - instance of a vector (table value)
       return value: number
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>SizeSq2D</h3>
     <div class="declaration">
@@ -891,9 +938,7 @@
       parameters: A - instance of a vector (table value)
       return value: number
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
     <h3>Size2D</h3>
     <div class="declaration">
@@ -905,8 +950,6 @@
       parameters: A - instance of a vector (table value)
       return value: number
     </div>
-    <div class="examples"><code></code>
 
-    </div>
 
 </body>
