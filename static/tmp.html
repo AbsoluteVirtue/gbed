@@ -533,83 +533,180 @@
 	</div>
 
 	<h3>GetPlayerCount</h3>
-	<div>
-		---
+	<div class="declaration">
+		gamemode::GetPlayerCount(ExcludeBots)
+	</div>
+	<div class="description">
+		returns the number of active characters
+
+		parameters: ExcludeBots - whether or not to include the bots in the final count (<b>boolean</b> value)
+		return value: <b>number</b>
 	</div>
 
 	<h3>GetPlayerList</h3>
-	<div>
-		---
+	<div class="declaration">
+		gamemode::GetPlayerList(SortType, TeamId, MustWantToEnterPlay, MinLives, MustBeHuman)
+	</div>
+	<div class="description">
+		returns a list of characters on a given team
+
+		parameters: SortType - ... (<b>string</b> value)
+		TeamId - unique team identifier (integer) (<b>number</b> value)
+		MustWantToEnterPlay - ... (<b>boolean</b> value)
+		MinLives - integer... (<b>number</b> value)
+		MustBeHuman - ... (<b>boolean</b> value)
+		return value: <b>table</b>
 	</div>
 
 	<h3>GetReadyPlayerTeamCounts</h3>
-	<div>
-		---
+	<div class="declaration">
+		gamemode::GetReadyPlayerTeamCounts(ExcludeBots)
+	</div>
+	<div class="description">
+		returns a list of ...
+
+		parameters: ExcludeBots - whether or not to include the bots in the final count (<b>boolean</b> value)
+		return value: <b>table</b>
 	</div>
 
 	<h3>GetRoundStage</h3>
-	<div>
-		---
+	<div class="declaration">
+		gamemode::GetRoundStage()
+	</div>
+	<div class="description">
+		returns the name of the current round's stage
+
+		return value: <b>string</b>
 	</div>
 
 	<h3>GetRoundStageTime</h3>
-	<div>
-		---
+	<div class="declaration">
+		gamemode::GetRoundStageTime()
+	</div>
+	<div class="description">
+		returns the remaining time of the current round's stage
+
+		return value: <b>number</b>
 	</div>
 
 	<h3>GetScript</h3>
-	<div>
-		---
+	<div class="declaration">
+		gamemode::GetScript()
+	</div>
+	<div class="description">
+		returns the list of settings for the current game mode
+
+		return value: <b>table</b>
 	</div>
 
 	<h3>HasGameOption</h3>
-	<div>
+	<div class="declaration">
+		gamemode::HasGameOption(OptionName)
+	</div>
+	<div class="description">
 		---
+
+		parameters: OptionName - name of option (<b>string</b> value)
+		return value: <b>boolean</b>
 	</div>
 
 	<h3>HasGameRule</h3>
-	<div>
+	<div class="declaration">
+		gamemode::HasGameRule(RuleName)
+	</div>
+	<div class="description">
 		---
+
+		parameters: RuleName - name of rule (<b>string</b> value)
+		return value: <b>boolean</b>
 	</div>
 
 	<h3>MakeEveryoneSpectate</h3>
-	<div>
+	<div class="declaration">
+		gamemode::MakeEveryoneSpectate()
+	</div>
+	<div class="description">
 		---
+
+		return value: <b>nil</b>
 	</div>
 
 	<h3>PrepLatecomer</h3>
-	<div>
+	<div class="declaration">
+		gamemode::PrepLatecomer(Target)
+	</div>
+	<div class="description">
 		---
+
+		parameters: Target - ... (<b>userdata</b> value)
+		return value: <b>userdata</b>
 	</div>
 
 	<h3>RemoveGameRule</h3>
-	<div>
+	<div class="declaration">
+		gamemode::RemoveGameRule(RuleName)
+	</div>
+	<div class="description">
 		---
+
+		parameters: RuleName - name of rule (<b>string</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>SendEveryoneToReadyRoom</h3>
-	<div>
+	<div class="declaration">
+		gamemode::SendEveryoneToReadyRoom()
+	</div>
+	<div class="description">
 		---
+
+		return value: <b>nil</b>
 	</div>
 
 	<h3>SendEveryoneToPlayArea</h3>
-	<div>
+	<div class="declaration">
+		gamemode::SendEveryoneToPlayArea()
+	</div>
+	<div class="description">
 		---
+
+		return value: <b>nil</b>
 	</div>
 
 	<h3>SetRoundStage</h3>
-	<div>
+	<div class="declaration">
+		gamemode::SetRoundStage(RoundStageName)
+	</div>
+	<div class="description">
 		---
+
+		parameters: RoundStageName - name of stage (<b>string</b> value)
+		return value: <b>nil</b>
 	</div>
 
+
 	<h3>SetRoundStageTime</h3>
-	<div>
+	<div class="declaration">
+		gamemode::SetRoundStageTime(RoundStageTime)
+	</div>
+	<div class="description">
 		---
+
+		parameters: RoundStageTime - time in seconds (floating point) (<b>number</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h3>SetTeamAttitude</h3>
-	<div>
+	<div class="declaration">
+		gamemode::SetTeamAttitude(Team, OtherTeam, Attitude)
+	</div>
+	<div class="description">
 		---
+
+		parameters: Team - unique team identification number (integer) (<b>number</b> value)
+		OtherTeam - unique team identification number (integer) (<b>number</b> value)
+		Attitude - can be either "friendly", "neutral" or "hostile" (<b>string</b> value)
+		return value: <b>nil</b>
 	</div>
 
 	<h2 id="a-gameplaystatistics">Gameplay Statistics</h2><a href="#a-categories-list">top</a>
