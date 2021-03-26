@@ -3,6 +3,8 @@
 <head>
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 	<!-- <link href="../styles/prism.css" rel="stylesheet" /> -->
+	<link rel="icon" type="image/png" href="../static/favicon.png"/>
+
 	<style>
 		html,
 		body {
@@ -32,6 +34,9 @@
 			display: inline-block;
 			border: rgb(80, 83, 86) 1px solid;
 			background-color: rgb(32, 37, 49);
+			white-space: pre;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 
 		h2:target {
@@ -40,6 +45,10 @@
 
 		pre {
 			white-space: pre-wrap;
+		}
+
+		td {
+			vertical-align: top;
 		}
 
 		.container {
@@ -51,12 +60,12 @@
 			padding: 1px 16px;
 		}
 
-		.description {
-			white-space: pre;
+		.declaration {
+			font-size: 20px;
 		}
 
 		.examples {
-			white-space: pre;
+			margin-left: 20px;
 		}
 
 		.output {
@@ -66,6 +75,8 @@
 			display: inline-block;
 			background-color: #434649;
 			border: rgb(80, 83, 86) 1px solid;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 
 		.sidebar {
@@ -119,25 +130,33 @@
 				actor::__tostring(Actor)
 			</div>
 			<div class="description">
-				converts an actor class instance to a string
+				<p>converts an actor class instance to a string</p>
 
-				parameters: Actor - instance of actor class (<b>userdata</b> value)
-				return value: <b>string</b>
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>Actor - instance of actor class (<b>userdata</b> value)</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>string</b></td>
+					</tr>
+				</table>
 			</div>
-			examples:
+			<p>examples:</p>
 			<div class="examples">
-				1.
+				1.<br>
 				<code class="language-lua">
-			function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)	
-				print(actor.__tostring(GameTrigger))
-				print(actor.__tostring(Character))
-			end
+function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)
+	print(actor.__tostring(GameTrigger))
+	print(actor.__tostring(Character))
+end
 				</code>
 
-				output:
+				<p>output:</p>
 				<div class="output">
-					LogLuaMachine: GBGameTrigger_0000000001
-					LogLuaMachine: BP_Character_C_2147479205
+LogLuaMachine: GBGameTrigger_0000000001
+LogLuaMachine: BP_Character_C_2147479205
 				</div>
 			</div>
 
@@ -146,11 +165,21 @@
 				actor::AddTag(Actor, Tag)
 			</div>
 			<div class="description">
-				adds a tag to the list of a given actor's tags
+				<p>adds a tag to the list of a given actor's tags</p>
 
-				parameters: Actor - instance of actor class (<b>userdata</b> value)
-				Tag - string to be added (<b>string</b> value)
-				return value: <b>nil</b>
+				<table>
+					<tr>
+						<td>parameters:</td> 
+						<td>
+							Actor - instance of actor class (<b>userdata</b> value)<br>
+							Tag - string to be added (<b>string</b> value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>GetLocation</h3>
