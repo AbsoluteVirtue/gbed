@@ -187,10 +187,18 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetLocation(Actor)
 			</div>
 			<div class="description">
-				---
+				<p>---</p>
 
-				parameters: Actor - instance of actor class
-				return value: table
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>Actor - instance of actor class</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>table</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>GetOverlaps</h3>
@@ -198,11 +206,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetOverlaps(Actor, Class)
 			</div>
 			<div class="description">
-				---
+				<p>---</p>
 
-				parameters: Actor - instance of actor class
-				Class - name of actor class
-				return value: table
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Actor - instance of actor class<br>
+							Class - name of actor class (<b>string</b> value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>table</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>GetTag</h3>
@@ -210,11 +228,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetTag(Actor, Index)
 			</div>
 			<div class="description">
-				returns a tag at a given index from a list of a given actor's tags
+				<p>returns a tag at a given index from a list of a given actor's tags</p>
 
-				parameters: Actor - instance of actor class
-				Index - index inside list of tags (integer value starting with 1)
-				return value: string
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Actor - instance of actor class<br>
+							Index - index inside list of tags (integer value starting with 1)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>string</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>GetTags</h3>
@@ -222,10 +250,18 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetTags(Actor)
 			</div>
 			<div class="description">
-				returns a list of tags of a given actor
+				<p>returns a list of tags of a given actor</p>
 
-				parameters: Actor - instance of actor class
-				return value: table
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>Actor - instance of actor class</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>table</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>GetTeamId</h3>
@@ -233,11 +269,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetTeamId(Actor)
 			</div>
 			<div class="description">
-				returns the identification number representing the given actor's team
-				team ID has to be set beforehand, either in the editor or programmatically
+				<p>
+					returns the identification number representing the given actor's team
+					team ID has to be set beforehand, either in the editor or programmatically
+				</p>
 
-				parameters: Actor - instance of actor class
-				return value: number
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>Actor - instance of actor class</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>number</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>HasTag</h3>
@@ -245,11 +291,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::HasTag(Actor, Tag)
 			</div>
 			<div class="description">
-				checks the list of a given actor's tags for a match with a specific string
+				<p>checks the list of a given actor's tags for a match with a specific string</p>
 
-				parameters: Actor - instance of actor class (userdata value)
-				Tag - string to be searched
-				return value: boolean
+				<table>
+					<tr>
+						<td>parameters:</td> 
+						<td>
+							Actor - instance of actor class (<b>userdata</b> value)<br>
+							Tag - string to be searched
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>boolean</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>IsActive</h3>
@@ -257,10 +313,18 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::IsActive(Actor)
 			</div>
 			<div class="description">
-				checks if the given actor has been activated
+				<p>checks if the given actor has been activated</p>
 
-				parameters: Actor - instance of actor class
-				return value: boolean
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>Actor - instance of actor class</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>boolean</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>IsOverlapping</h3>
@@ -268,11 +332,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::IsOverlapping(Actor, OtherActor)
 			</div>
 			<div class="description">
-				checks if the two given actor are ovelapping
+				<p>checks if the two given actor are ovelapping</p>
 
-				parameters: Actor - instance of actor class
-				OtherActor - instance of actor class
-				return value: boolean
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Actor - instance of actor class<br>
+							OtherActor - instance of actor class
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>boolean</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>RemoveTag</h3>
@@ -280,11 +354,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::RemoveTag(Actor, Tag)
 			</div>
 			<div class="description">
-				removes a tag from the list of a given actor's tags
+				<p>removes a tag from the list of a given actor's tags</p>
 
-				parameters: Actor - instance of actor class
-				Tag - name of tag to be added (<b>string</b> value)
-				return value: <b>nil</b>
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Actor - instance of actor class<br>
+							Tag - name of tag to be added (<b>string</b> value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>SetActive</h3>
@@ -292,11 +376,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::SetActive(Actor, NewActive)
 			</div>
 			<div class="description">
-				toggle a given actor's active status
+				<p>toggle a given actor's active status</p>
 
-				parameters: Actor - instance of actor class
-				NewActive - boolean value to be applied (true or false)
-				return value: nil
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Actor - instance of actor class<br>
+							NewActive - boolean value to be applied (true or false)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>SetEnableCollision</h3>
@@ -304,11 +398,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::SetEnableCollision(Actor, Enabled)
 			</div>
 			<div class="description">
-				toggle a given actor's collision processing
+				<p>toggle a given actor's collision processing</p>
 
-				parameters: Actor - instance of actor class
-				Enabled - boolean value to be applied (true or false)
-				return value: nil
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Actor - instance of actor class<br>
+							Enabled - boolean value to be applied (true or false)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>SetHidden</h3>
@@ -316,11 +420,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::SetHidden(Actor, Hidden)
 			</div>
 			<div class="description">
-				toggle a given actor's hidden setting
+				<p>toggle a given actor's hidden setting</p>
 
-				parameters: Actor - instance of actor class
-				Hidden - boolean value to be applied (true or false)
-				return value: nil
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Actor - instance of actor class<br>
+							Hidden - boolean value to be applied (true or false)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>SetTeamId</h3>
@@ -328,11 +442,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::SetTeamId(Actor, TeamId)
 			</div>
 			<div class="description">
-				sets the identification number of the given actor's team
+				<p>sets the identification number of the given actor's team</p>
 
-				parameters: Actor - instance of actor class
-				TeamId - identifier to be set for given actor (integer value)
-				return value: nil
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Actor - instance of actor class<br>
+							TeamId - identifier to be set for given actor (integer value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h2 id="a-ai">AI</h2><a href="#a-categories-list">top</a>
@@ -970,7 +1094,7 @@ LogLuaMachine: BP_Character_C_2147479205
 
 			<h3>ShowGameMessage</h3>
 			<div class="declaration">
-				player::SetLives(Player, Message, Duration)
+				player::ShowGameMessage(Player, Message, Duration)
 			</div>
 			<div class="description">
 				display a text message to a given player
@@ -983,7 +1107,7 @@ LogLuaMachine: BP_Character_C_2147479205
 
 			<h3>ShowWorldPrompt</h3>
 			<div class="declaration">
-				player::SetLives(Player, Location, Tag, Duration)
+				player::ShowWorldPrompt(Player, Location, Tag, Duration)
 			</div>
 			<div class="description">
 				---
