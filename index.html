@@ -1566,6 +1566,7 @@ LogLuaMachine: BP_Character_C_2147479205
 				</table>
 			</div>
 
+
 			<h2 id="a-timer">Timer</h2><a href="#a-categories-list">top</a>
 
 			<h3>Clear</h3>
@@ -1573,11 +1574,21 @@ LogLuaMachine: BP_Character_C_2147479205
 				timer::Clear(InTable, InKey)
 			</div>
 			<div class="description">
-				clears a timer clock previously started in Set with given key for given list
+				<p>clears a timer clock previously started in Set with given key for given list</p>
 
-				parameters: InTable - list of ... (table value)
-				InKey - name of ... (string value)
-				return value: nil
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							InTable - list of ... (table value)<br>
+							InKey - name of ... (string value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
 
 			<h3>ClearAll</h3>
@@ -1585,24 +1596,38 @@ LogLuaMachine: BP_Character_C_2147479205
 				timer::ClearAll()
 			</div>
 			<div class="description">
-				clears all currently running timer clocks
+				<p>clears all currently running timer clocks</p>
 
-				return value: nil
+				<table>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>Set</h3>
 			<div class="declaration">
 				timer::Set(InTable, InKey, InRate, InLoop)
 			</div>
 			<div class="description">
-				sets a timer clock
+				<p>sets a timer clock</p>
 
-				parameters: InTable - list of ... (table value)
-				InKey - name of ... (string value)
-				InRate - tick rate (number value)
-				InLoop - toggle ... (boolean value)
-				return value: nil
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							InTable - list of ... (table value)<br>
+							InKey - name of ... (string value)<br>
+							InRate - tick rate (number value)<br>
+							InLoop - toggle ... (boolean value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>nil</b></td>
+					</tr>
+				</table>
 			</div>
 
 
@@ -1613,114 +1638,190 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::__add(A, B)
 			</div>
 			<div class="description">
-				constructs a new vector that is a sum of two given vectors
+				<p>constructs a new vector that is a sum of two given vectors</p>
 
-				parameters: A - vector to be added to (table value)
-				B - vector to be added (table value)
-				return value: table
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							A - vector to be added to (table value)<br>
+							B - vector to be added (table value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>table</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>__div</h3>
 			<div class="declaration">
 				vector::__div(A, B)
 			</div>
 			<div class="description">
-				constructs a new vector that is a result of dividing two given vectors
+				<p>constructs a new vector that is a result of dividing two given vectors</p>
 
-				parameters: A - vector to be divided (table value)
-				B - vector to be divided by (table value)
-				return value: table
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							A - vector to be divided (<b>table</b> value)<br>
+							B - vector to be divided by (<b>table</b> value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>table</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>__eq</h3>
 			<div class="declaration">
 				vector::__div(A, B)
 			</div>
 			<div class="description">
-				checks whether the two given vectors are equal or not
+				<p>checks whether the two given vectors are equal or not</p>
 
-				parameters: A - vector to be checked (table value)
-				B - vector to be checked (table value)
-				return value: boolean
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							A - vector to be checked (<b>table</b> value)<br>
+							B - vector to be checked (<b>table</b> value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>boolean</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>__mul</h3>
 			<div class="declaration">
 				vector::__mul(A, B)
 			</div>
 			<div class="description">
-				constructs a new vector that is a result of multiplying two given vectors
+				<p>constructs a new vector that is a result of multiplying two given vectors</p>
 
-				parameters: A - vector to be multiplied (table value)
-				B - vector to be multiplied by (table value)
-				return value: table
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							A - vector to be multiplied (<b>table</b> value)<br>
+							B - vector to be multiplied by (<b>table</b> value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>table</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>__sub</h3>
 			<div class="declaration">
 				vector::__sub(A, B)
 			</div>
 			<div class="description">
-				constructs a new vector that is a result of subtracting two given vectors
+				<p>constructs a new vector that is a result of subtracting two given vectors</p>
 
-				parameters: A - vector to be subtracted from (table value)
-				B - vector to be subtracted (table value)
-				return value: table
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							A - vector to be subtracted from (<b>table</b> value)
+							B - vector to be subtracted (<b>table</b> value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>table</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>__tostring</h3>
 			<div class="declaration">
 				vector::__tostring(Vector)
 			</div>
 			<div class="description">
-				returns a string representation of a given vector
+				<p>returns a string representation of a given vector</p>
 
-				parameters: Vector - vector to be serialized (table value)
-				return value: string
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>Vector - vector to be serialized (<b>table</b> value)</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>string</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>new</h3>
 			<div class="declaration">
 				vector::new(Package, X, Y, Z)
 			</div>
 			<div class="description">
-				constructs a new vector with given starting values
+				<p>constructs a new vector with given starting values</p>
 
-				parameters: Package - instance of a vector (table value)
-				X - coordinate (floating point value)
-				Y - coordinate (floating point value)
-				Z - coordinate (floating point value)
-				return value: table
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>
+							Package - instance of a vector (<b>table</b> value)<br>
+							X - coordinate (floating point value)<br>
+							Y - coordinate (floating point value)<br>
+							Z - coordinate (floating point value)
+						</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>table</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>Size</h3>
 			<div class="declaration">
 				vector::Size(A)
 			</div>
 			<div class="description">
-				returns the length of a given vector
+				<p>returns the length of a given vector</p>
 
-				parameters: A - instance of a vector (table value)
-				return value: number
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>A - instance of a vector (<b>table</b> value)</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>number</b></td>
+					</tr>
+				</table>
 			</div>
-
 
 			<h3>SizeSq</h3>
 			<div class="declaration">
 				vector::Size(A)
 			</div>
 			<div class="description">
-				returns the squared length of a given vector
+				<p>returns the squared length of a given vector</p>
 
-				parameters: A - instance of a vector (table value)
-				return value: number
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>A - instance of a vector (<b>table</b> value)</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>number</b></td>
+					</tr>
+				</table>
 			</div>
 
 
@@ -1729,10 +1830,18 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::SizeSq2D(A)
 			</div>
 			<div class="description">
-				returns the length of a given vector
+				<p>returns the length of a given vector</p>
 
-				parameters: A - instance of a vector (table value)
-				return value: number
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>A - instance of a vector (<b>table</b> value)</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td><b>number</b></td>
+					</tr>
+				</table>
 			</div>
 
 
@@ -1741,10 +1850,18 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::Size2D(A)
 			</div>
 			<div class="description">
-				returns the length of a given vector
+				<p>returns the length of a given vector</p>
 
-				parameters: A - instance of a vector (table value)
-				return value: number
+				<table>
+					<tr>
+						<td>parameters:</td>
+						<td>A - instance of a vector (table value)</td>
+					</tr>
+					<tr>
+						<td>return value:</td>
+						<td>number</td>
+					</tr>
+				</table>
 			</div>
 		</main>
 	</div>
