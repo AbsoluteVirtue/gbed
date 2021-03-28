@@ -3,7 +3,13 @@
 <head>
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 	<!-- <link href="../styles/prism.css" rel="stylesheet" /> -->
+
+	<!-- <link rel="stylesheet"
+      	href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script> -->
+
 	<link rel="icon" type="image/png" href="./static/favicon.png"/>
+	<link rel="stylesheet" href="./styles/atom-one-dark-reasonable.css">
 
 	<style>
 		html,
@@ -28,23 +34,22 @@
 			padding-right: 10px;
 		}
 
-		code {
+		/* code {
 			font-family: 'Consolas';
-			font-size: 15px;
 			display: inline-block;
-			border: rgb(80, 83, 86) 1px solid;
 			background-color: rgb(32, 37, 49);
 			white-space: pre;
+		} */
+
+		code{
+			border: rgb(80, 83, 86) 1px solid;
+			font-size: 15px;
 			padding-left: 20px;
 			padding-right: 20px;
 		}
 
 		h2:target {
 			color: #1c87c9;
-		}
-
-		pre {
-			white-space: pre-wrap;
 		}
 
 		td {
@@ -146,13 +151,14 @@
 			<p>examples:</p>
 			<div class="examples">
 				1.<br>
-				<code class="language-lua">
+				<pre>
+					<code class="language-lua">
 function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)
 	print(actor.__tostring(GameTrigger))
 	print(actor.__tostring(Character))
 end
-				</code>
-
+					</code>
+				</pre>
 				<p>output:</p>
 				<div class="output">
 LogLuaMachine: GBGameTrigger_0000000001
@@ -1863,5 +1869,7 @@ LogLuaMachine: BP_Character_C_2147479205
 		</main>
 	</div>
 
-	<!-- <script src="../src/prism.js"></script> -->
+	<!-- <script src="./src/prism.js"></script> -->
+	<script src="./src/highlight.pack.js"></script>
+	<script>hljs.highlightAll();</script>
 </body>
