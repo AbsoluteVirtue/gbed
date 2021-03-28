@@ -34,14 +34,12 @@
 			padding-right: 10px;
 		}
 
-		/* code {
-			font-family: 'Consolas';
-			display: inline-block;
+		code {
+			/* font-family: 'Consolas';
 			background-color: rgb(32, 37, 49);
-			white-space: pre;
-		} */
+			display: inline-block;
+			white-space: pre; */
 
-		code{
 			border: rgb(80, 83, 86) 1px solid;
 			font-size: 15px;
 			padding-left: 20px;
@@ -71,6 +69,7 @@
 
 		.examples {
 			margin-left: 20px;
+			display: inline-block;
 		}
 
 		.output {
@@ -151,14 +150,12 @@
 			<p>examples:</p>
 			<div class="examples">
 				1.<br>
-				<pre>
-					<code class="language-lua">
+				<pre><code class="language-lua">
 function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)
 	print(actor.__tostring(GameTrigger))
 	print(actor.__tostring(Character))
 end
-					</code>
-				</pre>
+					</code></pre>
 				<p>output:</p>
 				<div class="output">
 LogLuaMachine: GBGameTrigger_0000000001
