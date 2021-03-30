@@ -138,16 +138,16 @@
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td class="params"></td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>string</b></td>
 					</tr>
 				</table>
 			</div>
-			<p>examples:</p>
+			<p class="ex"></p>
 			<div class="examples">
 				1.<br>
 				<pre><code class="language-lua">
@@ -156,7 +156,7 @@ function MyGameMode:OnGameTriggerBeginOverlap(GameTrigger, Character)
 	print(actor.__tostring(Character))
 end
 					</code></pre>
-				<p>output:</p>
+				<p class="ou"></p>
 				<div class="output">
 LogLuaMachine: GBGameTrigger_0000000001
 LogLuaMachine: BP_Character_C_2147479205
@@ -1874,8 +1874,18 @@ LogLuaMachine: BP_Character_C_2147479205
 
 		for (const [key, value] of Object.entries(data)) {
 			var parent = document.querySelector(`#${key}`);
-			parent.querySelector(`.desc`).textContent = value["desc"];
-			parent.querySelector(`table`).querySelector(`.params`).textContent = value["params"];
+			if ( parent ) {
+				parent.querySelector(`.desc`).textContent = value["desc"];
+				parent.querySelector(`table`).querySelector(`.params`).textContent = value["params"];
+			}
+
+			var general = document.querySelectorAll(`.${key}`);
+			if ( general ) {
+				for (var i = 0; i < general.length; ++i) {
+					console.log(general[i].textContent);
+					general[i].textContent = value;
+				} 
+			}
 		}
 	</script>
 </body>
