@@ -133,13 +133,13 @@
 			<div class="declaration">
 				actor::__tostring(Actor)
 			</div>
-			<div class="description">
-				<p>converts an actor class instance to a string</p>
+			<div class="description" id="actor___tostring">
+				<p class="desc"></p>
 
 				<table>
 					<tr>
 						<td>parameters:</td>
-						<td>Actor - instance of actor class (<b>userdata</b> value)</td>
+						<td class="params"></td>
 					</tr>
 					<tr>
 						<td>return value:</td>
@@ -1866,7 +1866,16 @@ LogLuaMachine: BP_Character_C_2147479205
 		</main>
 	</div>
 
-	<!-- <script src="./src/prism.js"></script> -->
 	<script src="./src/highlight.pack.js"></script>
 	<script>hljs.highlightAll();</script>
+	<script type="text/javascript" src="./src/data.js"></script>
+	<script>
+		var data = JSON.parse(text);
+
+		for (const [key, value] of Object.entries(data)) {
+			var parent = document.querySelector(`#${key}`);
+			parent.querySelector(`.desc`).textContent = value["desc"];
+			parent.querySelector(`table`).querySelector(`.params`).textContent = value["params"];
+		}
+	</script>
 </body>
