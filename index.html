@@ -174,13 +174,13 @@ LogLuaMachine: BP_Character_C_2147479205
 			<div class="declaration">
 				actor::GetLocation(Actor)
 			</div>
-			<div class="description">
+			<div class="description" id="actor_GetLocation">
 				<p class="desc"></p>
 
 				<table>
 					<tr>
 						<td class="pa"></td>
-						<td>Actor - instance of actor class</td>
+						<td class="params"></td>
 					</tr>
 					<tr>
 						<td class="re"></td>
@@ -1909,15 +1909,15 @@ LogLuaMachine: BP_Character_C_2147479205
 		for (const [key, value] of Object.entries(data)) {
 			var parent = document.querySelector(`#${key}`);
 			if ( parent ) {
-				parent.querySelector(`.desc`).textContent = value["desc"];
-				parent.querySelector(`table`).querySelector(`.params`).textContent = value["params"];
+				parent.querySelector(`.desc`).innerHTML = value["desc"];
+				parent.querySelector(`table`).querySelector(`.params`).innerHTML = value["params"];
 			}
 
 			var general = document.querySelectorAll(`.${key}`);
 			if ( general ) {
 				for (var i = 0; i < general.length; ++i) {
-					console.log(general[i].textContent);
-					general[i].textContent = value;
+					console.log(general[i].innerHTML);
+					general[i].innerHTML = value;
 				} 
 			}
 		}

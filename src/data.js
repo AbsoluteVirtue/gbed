@@ -12,5 +12,9 @@ text = `{
         "params": "\
         Actor (<b>userdata<\/b>) - instance of actor class<br>\
         Tag (<b>string<\/b>) - string to be added"
+    },
+    "actor_GetLocation": {
+        "desc": "...",
+        "params": "Actor (<b>userdata<\/b>) - instance of actor class"
     }
 }`;
