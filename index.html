@@ -38,6 +38,10 @@
 			color: #1c87c9;
 		}
 
+		h3 {
+			margin-top: 40px;
+		}
+
 		td {
 			vertical-align: top;
 		}
@@ -193,16 +197,13 @@ LogLuaMachine: BP_Character_C_2147479205
 			<div class="declaration">
 				actor::GetOverlaps(Actor, Class)
 			</div>
-			<div class="description">
+			<div class="description" id="actor_GetOverlaps">
 				<p class="desc"></p>
 
 				<table>
 					<tr>
 						<td class="pa"></td>
-						<td>
-							Actor - instance of actor class<br>
-							Class - name of actor class (<b>string</b> value)
-						</td>
+						<td class="params"></td>
 					</tr>
 					<tr>
 						<td class="re"></td>
@@ -215,17 +216,13 @@ LogLuaMachine: BP_Character_C_2147479205
 			<div class="declaration">
 				actor::GetTag(Actor, Index)
 			</div>
-			<div class="description">
+			<div class="description" id="actor_GetTag">
 				<p class="desc"></p>
-				<p>returns a tag at a given index from a list of a given actor's tags</p>
 
 				<table>
 					<tr>
 						<td class="pa"></td>
-						<td>
-							Actor - instance of actor class<br>
-							Index - index inside list of tags (integer value starting with 1)
-						</td>
+						<td class="params"></td>
 					</tr>
 					<tr>
 						<td class="re"></td>
@@ -238,14 +235,13 @@ LogLuaMachine: BP_Character_C_2147479205
 			<div class="declaration">
 				actor::GetTags(Actor)
 			</div>
-			<div class="description">
+			<div class="description" id="actor_GetTags">
 				<p class="desc"></p>
-				<p>returns a list of tags of a given actor</p>
 
 				<table>
 					<tr>
 						<td class="pa"></td>
-						<td>Actor - instance of actor class</td>
+						<td class="params"></td>
 					</tr>
 					<tr>
 						<td class="re"></td>
