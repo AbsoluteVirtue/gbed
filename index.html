@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 
 <head>
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-	<!-- <link href="../styles/prism.css" rel="stylesheet" /> -->
-
-	<!-- <link rel="stylesheet"
-      	href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script> -->
-
 	<link rel="icon" type="image/png" href="./static/favicon.png"/>
 	<link rel="stylesheet" href="./styles/atom-one-dark-reasonable.css">
 
@@ -35,11 +28,6 @@
 		}
 
 		code {
-			/* font-family: 'Consolas';
-			background-color: rgb(32, 37, 49);
-			display: inline-block;
-			white-space: pre; */
-
 			border: rgb(80, 83, 86) 1px solid;
 			font-size: 15px;
 			padding-left: 20px;
@@ -167,19 +155,16 @@ LogLuaMachine: BP_Character_C_2147479205
 			<div class="declaration">
 				actor::AddTag(Actor, Tag)
 			</div>
-			<div class="description">
-				<p>adds a tag to the list of a given actor's tags</p>
+			<div class="description" id="actor_AddTag">
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td> 
-						<td>
-							Actor - instance of actor class (<b>userdata</b> value)<br>
-							Tag - string to be added (<b>string</b> value)
-						</td>
+						<td class="pa"></td> 
+						<td class="params"></td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -190,15 +175,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetLocation(Actor)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Actor - instance of actor class</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -209,18 +194,18 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetOverlaps(Actor, Class)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Actor - instance of actor class<br>
 							Class - name of actor class (<b>string</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -231,18 +216,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetTag(Actor, Index)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a tag at a given index from a list of a given actor's tags</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Actor - instance of actor class<br>
 							Index - index inside list of tags (integer value starting with 1)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>string</b></td>
 					</tr>
 				</table>
@@ -253,15 +239,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetTags(Actor)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a list of tags of a given actor</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Actor - instance of actor class</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -272,6 +259,7 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::GetTeamId(Actor)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>
 					returns the identification number representing the given actor's team
 					team ID has to be set beforehand, either in the editor or programmatically
@@ -279,11 +267,11 @@ LogLuaMachine: BP_Character_C_2147479205
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Actor - instance of actor class</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>number</b></td>
 					</tr>
 				</table>
@@ -294,18 +282,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::HasTag(Actor, Tag)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>checks the list of a given actor's tags for a match with a specific string</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td> 
+						<td class="pa"></td> 
 						<td>
 							Actor - instance of actor class (<b>userdata</b> value)<br>
 							Tag - string to be searched
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>boolean</b></td>
 					</tr>
 				</table>
@@ -316,15 +305,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::IsActive(Actor)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>checks if the given actor has been activated</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Actor - instance of actor class</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>boolean</b></td>
 					</tr>
 				</table>
@@ -335,18 +325,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::IsOverlapping(Actor, OtherActor)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>checks if the two given actor are ovelapping</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Actor - instance of actor class<br>
 							OtherActor - instance of actor class
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>boolean</b></td>
 					</tr>
 				</table>
@@ -357,18 +348,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::RemoveTag(Actor, Tag)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>removes a tag from the list of a given actor's tags</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Actor - instance of actor class<br>
 							Tag - name of tag to be added (<b>string</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -379,18 +371,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::SetActive(Actor, NewActive)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>toggle a given actor's active status</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Actor - instance of actor class<br>
 							NewActive - boolean value to be applied (true or false)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -401,18 +394,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::SetEnableCollision(Actor, Enabled)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>toggle a given actor's collision processing</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Actor - instance of actor class<br>
 							Enabled - boolean value to be applied (true or false)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -423,18 +417,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::SetHidden(Actor, Hidden)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>toggle a given actor's hidden setting</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Actor - instance of actor class<br>
 							Hidden - boolean value to be applied (true or false)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -445,18 +440,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				actor::SetTeamId(Actor, TeamId)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>sets the identification number of the given actor's team</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Actor - instance of actor class<br>
 							TeamId - identifier to be set for given actor (integer value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -470,15 +466,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				ai::CleanUp(AIControllerTag)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>removes all AI-controlled characters of a given type</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>AIControllerTag - name of controller</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -489,11 +486,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				ai::Create(SpawnPoint, AIControllerTag, FreezeTime)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>create an AI-controlled character at a given spawn point</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							SpawnPoint - instance of spawner-actor class<br>
 							AIControllerTag - name of controller<br>
@@ -501,7 +499,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -512,11 +510,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				ai::CreateOverDuration(Duration, Count, OrderedSpawnPoints, AIControllerTag)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>create an AI-controlled character at a given spawn point</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Duration - delay in seconds spawning characters (floating-point value)<br>
 							Count - number of characters to spawn (integer value)<br>
@@ -525,7 +524,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -536,11 +535,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				ai::GetControllers(Class, Tag, TeamId, SquadId)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Class - name of class<br>
 							Tag - name of previousy added tag<br>
@@ -549,7 +548,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -560,11 +559,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				ai::GetMaxCount()
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>number</b></td>
 					</tr>
 				</table>
@@ -578,15 +577,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::AddGameRule(RuleName)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>RuleName - name of rule to be added (<b>string</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -597,11 +596,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::AddGameObjective(TeamId, Name, Type)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							TeamId - unique team identifier (<b>number</b> value)<br>
 							Name - name of objective (<b>string</b> value)<br>
@@ -609,7 +608,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -620,15 +619,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::AddGameStat(GameStat)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>GameStat - name of statistic to be added (<b>string</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td> 
+						<td class="re"></td> 
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -639,11 +638,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::AddGameSetting(Name, MinValue, MaxValue, IterateValue, DefaultValue)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Name - name of setting to be added (<b>string</b> value)<br>
 							MinValue - lower bound (integer) ... (<b>number</b> value)<br>
@@ -653,7 +652,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -664,11 +663,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::AddObjectiveMarker(Location, TeamId, Name, Active)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Location - vector representing coordinates (<b>table</b> value)<br>
 							TeamId - identifier representing character's team (<b>number</b> value)<br>
@@ -677,7 +676,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -688,11 +687,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::AddPlayerTeam(Team, Name, ProfileName)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Team - identifier representing character's team (<b>number</b> value)<br>
 							Name - ... (<b>string</b> value)<br>
@@ -700,7 +699,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -711,15 +710,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::AddStringTable(StringTableId)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>StringTableId - unique identifier for list/table (<b>string</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -730,18 +729,18 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::BroadcastGameMessage(GameMessageId, Duration)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							GameMessageId - unique identifier for message (<b>string</b> value)<br>
 							Duration - delay in seconds (<b>number</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -752,11 +751,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::ClearGameObjectives()
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -767,11 +766,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::ClearGameStats()
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -782,11 +781,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::ClearRoundStageTime()
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -797,15 +796,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::EnterPlayArea(Target)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Target - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -816,15 +815,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::EnterReadyRoom(Target)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Target - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -835,15 +834,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetBestLateComerInsertionPoint(Target)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Target - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>userdata</b></td>
 					</tr>
 				</table>
@@ -854,15 +853,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetGameOption(OptionName)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>OptionName - name of option (<b>string</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>string</b></td>
 					</tr>
 				</table>
@@ -873,15 +872,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetInsertionPointName(InsertionPoint)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>InsertionPoint - instance of insertion point actor class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>string</b></td>
 					</tr>
 				</table>
@@ -892,15 +891,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetPlayerCount(ExcludeBots)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns the number of active characters</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>ExcludeBots - whether or not to include the bots in the final count (<b>boolean</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>number</b></td>
 					</tr>
 				</table>
@@ -911,11 +911,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetPlayerList(SortType, TeamId, MustWantToEnterPlay, MinLives, MustBeHuman)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a list of characters on a given team</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							SortType - ... (<b>string</b> value)<br>
 							TeamId - unique team identifier (integer) (<b>number</b> value)<br>
@@ -925,7 +926,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -936,14 +937,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetReadyPlayerTeamCounts(ExcludeBots)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a list of ...</p>
 
 				<tr>
-					<td>parameters:</td>
+					<td class="pa"></td>
 					<td>ExcludeBots - whether or not to include the bots in the final count (<b>boolean</b> value)</td>
 				</tr>
 				<tr>
-					<td>return value:</td>
+					<td class="re"></td>
 					<td><b>table</b></td>
 				</tr>
 			</div>
@@ -953,11 +955,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetRoundStage()
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns the name of the current round's stage</p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>string</b></td>
 					</tr>
 				</table>
@@ -968,11 +971,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetRoundStageTime()
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns the remaining time of the current round's stage</p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>number</b></td>
 					</tr>
 				</table>
@@ -983,11 +987,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::GetScript()
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns the list of settings for the current game mode</p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -998,15 +1003,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::HasGameOption(OptionName)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>OptionName - name of option (<b>string</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>boolean</b></td>
 					</tr>
 				</table>
@@ -1017,14 +1022,14 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::HasGameRule(RuleName)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<tr>
-					<td>parameters:</td>
+					<td class="pa"></td>
 					<td>RuleName - name of rule (<b>string</b> value)</td>
 				</tr>
 				<tr>
-					<td>return value:</td>
+					<td class="re"></td>
 					<td><b>boolean</b></td>
 				</tr>
 			</div>
@@ -1034,11 +1039,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::MakeEveryoneSpectate()
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1049,15 +1054,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::PrepLatecomer(Target)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Target - ... (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>userdata</b></td>
 					</tr>
 				</table>
@@ -1068,15 +1073,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::RemoveGameRule(RuleName)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>RuleName - name of rule (<b>string</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1087,11 +1092,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::SendEveryoneToReadyRoom()
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1102,11 +1107,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::SendEveryoneToPlayArea()
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1117,15 +1122,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::SetRoundStage(RoundStageName)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>RoundStageName - name of stage (<b>string</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1136,15 +1141,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::SetRoundStageTime(RoundStageTime)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>RoundStageTime - time in seconds (floating point) (<b>number</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1155,11 +1160,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				gamemode::SetTeamAttitude(Team, OtherTeam, Attitude)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Team - unique team identification number (integer) (<b>number</b> value)<br>
 							OtherTeam - unique team identification number (integer) (<b>number</b> value)<br>
@@ -1167,7 +1172,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1181,15 +1186,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				gameplaystatistics::GetAllActorsOfClass(Class)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a list of instances of actor classes for a given class name</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Class - name of class</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1200,15 +1206,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				gameplaystatistics::GetAllActorsOfClassWithTag(Class, Tag)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a list of instances of actor classes for a given class name and tag name</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Tag - name of tag</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1219,15 +1226,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				gameplaystatistics::GetAllActorsWithTag(Tag)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a list of instances of actor classes for a given tag name</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Tag - name of tag</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1238,15 +1246,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				gameplaystatistics::print(Message)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>outputs a message to the log window (terminal)</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Message - null-terminated string</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1260,15 +1269,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				math::random(Max)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>generates a random number for and up to a given maximum value</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Max - upper bound to be used for generating (integer or float value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>number</b></td>
 					</tr>
 				</table>
@@ -1279,16 +1289,17 @@ LogLuaMachine: BP_Character_C_2147479205
 				math::randomrange(Min, Max)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>generates a random number for two given values that will act as minimum and maximum</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Min - lower bound to be used for generating (integer or float value)<br>
 						Max - upper bound (integer or float value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td>number</td>
 					</tr>
 				</table>
@@ -1302,18 +1313,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::FreezePlayer(Player, Duration)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>delays activation of a player instance</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Player - instance of player class (<b>userdata</b> value)<br>
 							Duration - delay in seconds (<b>number</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1324,15 +1336,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::GetCharacter(Player)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns instance of character class for a given player instance</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Player - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>userdata</b></td>
 					</tr>
 				</table>
@@ -1343,15 +1356,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::GetInsertionPoint(Player)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns instance of insertion point actor class for a given player instance</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Player - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>userdata</b></td>
 					</tr>
 				</table>
@@ -1362,15 +1376,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::GetInventory(Player)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a list of items owned by a given player instance</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Player - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1381,15 +1396,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::GetLives(Player)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Player - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>userdata</b></td>
 					</tr>
 				</table>
@@ -1400,15 +1415,15 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::GetPlayerState(Player)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Player - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>userdata</b></td>
 					</tr>
 				</table>
@@ -1419,18 +1434,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::HasItemWithTag(Player, Tag)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>check if a given player instance owns an item with a given tag or not</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Player - instance of player class (<b>userdata</b> value)<br>
 							Tag - name of tag (<b>string</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>boolean</b></td>
 					</tr>
 				</table>
@@ -1441,15 +1457,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::IsAlive(Player)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>checks if a given player instance is alive or dead</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Player - instance of player class (<b>userdata</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>boolean</b></td>
 					</tr>
 				</table>
@@ -1460,18 +1477,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::SetAllowedToRestart(Player, Allowed)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>toggles whether a player instance is allowed to restart the match or not</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Player - instance of player class (<b>userdata</b> value)<br>
 							Allowed - <b>boolean</b> value to be applied (true or false)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1482,18 +1500,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::SetInsertionPoint(Player, NewInsertionPoint)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>sets an instance of insertion point actor class for a given player instance</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Player - instance of player class (<b>userdata</b> value)<br>
 							NewInsertionPoint - instance of insertion point class (<b>userdata</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1504,18 +1523,18 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::SetLives(Player, NewLives)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Player - instance of player class (<b>userdata</b> value)<br>
 							NewLives - amount (integer) to set player lives to (<b>number</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1526,11 +1545,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::ShowGameMessage(Player, Message, Duration)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>display a text message to a given player</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Player - instance of player class (<b>userdata</b> value)<br>
 							Message - text to display (<b>string</b> value)<br>
@@ -1538,7 +1558,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1549,11 +1569,11 @@ LogLuaMachine: BP_Character_C_2147479205
 				player::ShowWorldPrompt(Player, Location, Tag, Duration)
 			</div>
 			<div class="description">
-				<p>---</p>
+				<p class="desc"></p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Player - instance of player class (<b>userdata</b> value)<br>
 							Location - vector pointing to location (<b>table</b> value)<br>
@@ -1562,7 +1582,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1576,18 +1596,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				timer::Clear(InTable, InKey)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>clears a timer clock previously started in Set with given key for given list</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							InTable - list of ... (table value)<br>
 							InKey - name of ... (string value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1598,11 +1619,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				timer::ClearAll()
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>clears all currently running timer clocks</p>
 
 				<table>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1613,11 +1635,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				timer::Set(InTable, InKey, InRate, InLoop)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>sets a timer clock</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							InTable - list of ... (table value)<br>
 							InKey - name of ... (string value)<br>
@@ -1626,7 +1649,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>nil</b></td>
 					</tr>
 				</table>
@@ -1640,18 +1663,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::__add(A, B)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>constructs a new vector that is a sum of two given vectors</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							A - vector to be added to (table value)<br>
 							B - vector to be added (table value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1662,18 +1686,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::__div(A, B)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>constructs a new vector that is a result of dividing two given vectors</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							A - vector to be divided (<b>table</b> value)<br>
 							B - vector to be divided by (<b>table</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1684,18 +1709,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::__div(A, B)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>checks whether the two given vectors are equal or not</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							A - vector to be checked (<b>table</b> value)<br>
 							B - vector to be checked (<b>table</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>boolean</b></td>
 					</tr>
 				</table>
@@ -1706,18 +1732,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::__mul(A, B)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>constructs a new vector that is a result of multiplying two given vectors</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							A - vector to be multiplied (<b>table</b> value)<br>
 							B - vector to be multiplied by (<b>table</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1728,18 +1755,19 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::__sub(A, B)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>constructs a new vector that is a result of subtracting two given vectors</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							A - vector to be subtracted from (<b>table</b> value)
 							B - vector to be subtracted (<b>table</b> value)
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1750,15 +1778,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::__tostring(Vector)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns a string representation of a given vector</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>Vector - vector to be serialized (<b>table</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>string</b></td>
 					</tr>
 				</table>
@@ -1769,11 +1798,12 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::new(Package, X, Y, Z)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>constructs a new vector with given starting values</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>
 							Package - instance of a vector (<b>table</b> value)<br>
 							X - coordinate (floating point value)<br>
@@ -1782,7 +1812,7 @@ LogLuaMachine: BP_Character_C_2147479205
 						</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>table</b></td>
 					</tr>
 				</table>
@@ -1793,15 +1823,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::Size(A)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns the length of a given vector</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>A - instance of a vector (<b>table</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>number</b></td>
 					</tr>
 				</table>
@@ -1812,15 +1843,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::Size(A)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns the squared length of a given vector</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>A - instance of a vector (<b>table</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>number</b></td>
 					</tr>
 				</table>
@@ -1831,15 +1863,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::SizeSq2D(A)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns the length of a given vector</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>A - instance of a vector (<b>table</b> value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td><b>number</b></td>
 					</tr>
 				</table>
@@ -1850,15 +1883,16 @@ LogLuaMachine: BP_Character_C_2147479205
 				vector::Size2D(A)
 			</div>
 			<div class="description">
+				<p class="desc"></p>
 				<p>returns the length of a given vector</p>
 
 				<table>
 					<tr>
-						<td>parameters:</td>
+						<td class="pa"></td>
 						<td>A - instance of a vector (table value)</td>
 					</tr>
 					<tr>
-						<td>return value:</td>
+						<td class="re"></td>
 						<td>number</td>
 					</tr>
 				</table>
